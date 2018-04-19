@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Affiliate">
+	<select id="affTotalCount" resultType="int"  parameterType="CommPageDTO">
+		select	count(aff_seq)
+		from	ad_affiliate
+		where	status_kind = '10'
+		and		master_seq = 2
+	</select>
+	
+	<select id="affList" resultType="AffiliateDTO" parameterType="CommPageDTO">
+		select	tNum
+				,affSeq
+				,affTitle
+				,affUrl
+				,affIntro
+				,fileSeq
+				,fileStrnm
+				,fileOrgnm
+			
+		from	(
+					select	@rn := @rn + 1	as	tNum
+							,affSeq
+							,affTitle
+							,affUrl
+							,affIntro
+							,fileSeq
+							,fileStrnm
+							,fileOrgnm
+					from	(
+								select	aaf.aff_seq		as	affSeq
+										,aaf.aff_title	as	affTitle
+										,aaf.aff_url	as	affUrl
+										,case	when aaf.aff_intro is null then '-'
+												when aaf.aff_intro = 'null' then '-'
+												else aaf.aff_intro
+												end		as	affIntro
+										,case	when afl.file_seq is null then 0
+												when afl.file_seq = 'null' then 0
+												else afl.file_seq
+												end		as	fileSeq
+										,file_strnm		as	fileStrnm
+										,file_orgnm		as	fileOrgnm
+								from	ad_affiliate aaf
+								left join ad_file afl
+									on	aaf.file_seq = afl.file_seq
+								where	aaf.status_kind = '10'
+								and	aaf.master_seq = 2
+							)sa
+							,(select @rn := 0) R
+							order by affSeq desc
+				) sq
+		where	tNum between ${startRow} and ${endRow}
+	</select>
+	
+	<select id="affDetail" parameterType="AffiliateDTO" resultType="AffiliateDTO">
+		select	aff_seq				as	affSeq
+				,aff_title			as	affTitle
+				,aff_url			as	affUrl
+				,aff_intro			as	affIntro
+				,adf.file_seq		as	fileSeq
+				,adf.file_orgnm		as	fileOrgnm
+				,adf.file_strnm		as	fileStrnm
+				,aaf.create_date	as	createDate
+				
+		from	ad_affiliate aaf
+		left join ad_file adf
+			on aaf.file_seq = adf.file_seq
+		where	aff_seq = ${affSeq}
+	</select>
+
+	<insert id="affInsert" parameterType="AffiliateDTO">
+		<selectKey keyProperty="affSeq" resultType="int" order="BEFORE">
+			select ifnull(max(aff_seq), 0) + 1	as affSeq from ad_affiliate
+		</selectKey>
+		insert into ad_affiliate
+		(
+			aff_seq
+			,master_seq
+			,file_seq
+			,aff_title
+			,aff_url
+			,aff_intro
+			,create_user_id
+			,create_date
+			,status_kind
+		)
+		value
+		(
+			${affSeq}
+			,2
+			,${fileSeq}
+			,#{affTitle}
+			,#{affUrl}
+			,#{affIntro}
+			,#{createUserId}
+			,now()
+			,'10'
+		)
+	</insert>
+	
+	<update id="affUpdate" parameterType="AffiliateDTO">
+		update	ad_affiliate
+		set		file_seq = ${fileSeq}
+				,aff_title = #{affTitle}
+				,aff_url = #{affUrl}
+				,aff_intro = #{affIntro}
+				
+		where	aff_seq = ${affSeq}
+		and		master_seq = 2
+	</update>	
+	
+	<update id="affDelete" parameterType="AffiliateDTO">
+		update	ad_affiliate
+		set		status_kind = '40'
+		where	aff_seq = ${affSeq}
+		and		master_seq = 2
+	</update>
+</mapper>

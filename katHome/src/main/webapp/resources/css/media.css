@@ -1,0 +1,2490 @@
+@charset "utf-8";
+
+/* ------------------------  서브 ------------------------ */
+/* 뷰포트 너비가 768px 이상 ‘그리고’ 1280px 이하이면 실행 */
+@media all and (min-width:1025px) and (max-width:1280px) {
+
+	/* 공통 - 헤더 */
+	.util .btn_groupware{
+		display: none;
+	}
+	.util .language{
+		display:none;
+	}
+	/* ---------- 회사소개 - 주요 계열사 ---------- */
+	.customer_box{
+		width:32%;
+	}
+	.customer_box:nth-child(3n){
+		margin-right:0;
+	}
+	.customer_box:nth-child(4n){
+		margin-right:2%;
+	}
+	.customer_info {
+		min-height:220px;
+	}
+	.customer_info strong{
+		font-size:20px;
+	}
+
+	/* ---------- 회사소개 - 오시는 길 ---------- */
+	.location_tit{
+		width:90%;
+		margin: 20px auto 0;
+	}
+	.lo_tr,
+	.transport_box{
+		width:90%;
+		margin:0  auto;
+	}
+
+	/* ---------- 회사소개 - 기업소개 ---------- */
+	.company_cont{
+		background-size:100%;
+	}
+
+	/* ---------- 회사소개 - 주요 계열사 ---------- */
+	.lin_form{
+		width:70.17%;
+	}
+	.group_box{
+		width:30%;
+		margin-right:5%;
+	}
+	.company_info{
+		height:215px;
+	}
+	/* ---------- 방산 사업 - 케비닛 ---------- */
+	.cont_sub_box{
+		margin-top:60px;
+		padding: 20px 0;
+	}
+	.sub_topic::before{
+		top:-83px;
+		height:65px;
+	}
+	.spec_grid{
+		width:40%;
+		height:420px;
+		cursor:default;
+		padding:5% 4% 5% 4%;
+		margin-bottom:15px;
+	}
+	.spec_grid > strong{
+		display: inline;
+	    width: inherit;
+		font-size:28px;
+		margin-bottom:20px;
+	}
+	.spec_grid > strong::before {
+		content:"";
+		position:absolute;
+		bottom:-10px;
+		display:block;
+		width:100%;
+		height:2px;
+		background-color:rgba(255, 255, 255, 0.5);
+	}
+	.spec_grid > strong::after {
+		content:"";
+		position:absolute;
+		bottom:-10px;
+		display:block;
+		width:0%;
+		height:2px;
+		background-color:#fff;
+		transition:all .4s ease-out;
+	}
+	.spec_grid:hover > strong::after,
+	.spec_grid.active > strong::after {
+		width:100%;
+	}
+	.spec_grid > p{
+		display:none;
+	}
+	.spec_cont{
+		padding:15px 20px;
+		box-shadow:inherit;
+	}
+	.spec_cont li{
+		padding:10px;
+	}
+	.spec_cont.antenna_cont,
+	.spec_cont.combine_cont,
+	.spec_cont.system_cont{
+		position:static;
+		float:left;
+		width:60%;
+		height:420px;
+		display:block !important;
+		margin-bottom:15px;
+	}
+	.spec_cont.antenna_cont strong:before,
+	.spec_cont.combine_cont strong:before{
+		left:-50px;
+		border-width:15px;
+		z-index:10;
+		top:32px;
+	}
+	.spec_cont.system_cont strong:before{
+		left:-50px;
+		border-width:15px;
+		right:inherit;
+		border-color:transparent #568ad8 transparent transparent;
+		z-index:10;
+		top:32px;
+	}
+	.img_spec{
+		margin:10px 0;
+		padding:10px;
+	}
+	.btn_spec_close{
+		display:none;
+	}
+	/* ---------- 방산 사업 - 콘솔 ---------- */
+	.competency_part .img_product{
+		width:36%;
+	}
+	.competency_part .img_product img{
+		margin: 0 auto 0 -40px;
+	}
+	.spec_info_form{
+		width:64%;
+	}
+	/* ---------- 민수 사업 - 칩마운터 ---------- */
+	.product_dp_box{
+		width:100%;
+		height:400px;
+	}
+	.product_info_inner{
+		padding: 25px 40px;
+	}
+	.product_dp_box.mini{
+		height:360px;
+	}
+	.product_img.img01{
+		background-position:center -30px;
+	}
+	.product_img.img02{
+		background-position:center -30px;
+		float:right;
+	}
+	.product_info_box.db_box02:before {
+	    border-color: transparent transparent transparent #fe5a0a;
+        right: -34px;
+        left:inherit;
+	}
+	.product_dp_box:hover .product_info_box.db_box02:before{
+		border-color:transparent transparent transparent #de4a02;
+		transition:.3s;
+	}
+	/* ---------- 민수 사업 - 협동로봇 ---------- */
+	.product_img.img03{
+		background-position: center -50px;
+	}
+	.product_img.img04{
+		background-position: center -50px;
+		float:right;
+	}
+	.product_info_box.db_box04:before{
+	    border-color: transparent transparent transparent #2d4674;
+	    left: inherit;
+	    right: -32px;
+	}
+	.product_dp_box:hover .product_info_box.db_box04:before{
+		border-color:transparent transparent transparent #253c65;
+	}
+	.product_img.img05{
+		background-position: center -50px;
+		float:left;
+	}
+	.product_info_box.db_box05:before {
+	    border-color: transparent #1aa2b2 transparent transparent;
+	    left: -34px;
+	    right: inherit;
+	}
+	.product_dp_box:hover .product_info_box.db_box05:before{
+		border-color:transparent #1794a2 transparent transparent ;
+	}
+	.product_img.img06{
+		background-position: center -50px;
+		float:right;
+	}
+}	
+
+/* 뷰포트 너비가 768px 이상 ‘그리고’ 1024px 이하이면 실행 */
+@media all and (min-width:768px) and (max-width:1024px) {
+	/* 공통 */
+	.util .btn_groupware{
+		display: none;
+	}
+	.util .language{
+		display:none;
+	}
+	.gnb{
+		display:none;
+	}
+	.remote{
+		display: none;
+	}
+	.main_video .thevideo_box{
+		position:absolute;
+		left:-9999999em;
+		top:-99999em;
+		margin-left:999999999px;
+	}
+	/* 서브 헤드 */
+	.sub_head.community{
+		background-size:120%;
+	    background-position: 60%;
+	}
+	.sub_head .sub_head_inner{
+		width:90%;
+	}
+	
+	/* 서브 컨텐츠 */
+	.sub_cont_inner{
+		width:90%;
+	}
+
+	/* 풋터 */
+	footer .foot_info li{
+		display:inline-block;
+	}
+	footer address div{
+		float:inherit;
+		margin-bottom:20px;
+	}
+	footer address img{
+		float:inherit;
+	}
+	/* 풋터 - 동영상보기 팝업 */
+	.pup_wrap.video {
+	    margin-left: -357px;
+	    margin-top: -225px;
+	    width: 700px;
+	    height: 410px;
+	}
+	/* ----------공지사항 ---------- */
+	/* 공지사항 - 검색*/
+	.search_value .period{
+		width:45%;
+	}
+	.search_value .date{
+		width:54%;
+		margin-right:0;
+	}
+	.search_value .date div{
+		width:47%;
+		float:right;
+	}
+	.search_value .date span{
+		float:right;
+		margin:5px 1% 0;
+	}
+	.search_value .item_search{
+		width:100%;
+		margin-top:10px;
+	}
+	.search_value .item_search .item{
+		width:72.1%;
+	}
+	.search_value .item_search .top_search_btn{
+		width:25.3%;
+	}
+
+	/* 공지사항 - 리스트 */
+	.notice_box{
+		width:49%;
+	}
+	.notice_box:nth-child(2n){
+		margin-right:0;
+	}
+
+	/* 공지사항 - 내용보기 팝업 */
+	.pup_wrap{
+	   	position: fixed;
+	    width: auto;
+	    height: auto;
+	    left: 10%;
+	    right: 10%;
+	    margin: 0;
+	    top: 100px;
+	    bottom: 10%;
+	}
+	.pup_cont{
+		position:fixed;
+		width:auto;
+		height:auto;
+		left:10%;
+		right:10%;
+		top:200px;
+		bottom:10%;
+	}
+
+	/* ---------- 회사소개 - 주요연혁 ---------- */
+	.history_cont .history_title {
+	    right: 0;
+	    bottom: auto;
+	    width: 100%;
+	    background-position: left bottom;
+	    background-size: 7em;
+	}
+	.history_cont .history_title strong {
+	    padding: 15px 30px;
+	    font-size: 24px;
+	    background-position: right 0;
+	    background-size: 7em;
+	}
+	.diagonal_line {
+	    margin-top: 0;
+	    margin-left: -26em;
+	}
+	.history_cont ul {
+	    padding-top: 9em;
+	    padding-left: 0;
+	}
+	/* ---------- 회사소개 - 주요 계열사 ---------- */
+	.customer_box{
+		width:49%;
+		margin-right:2%;
+	}
+	.customer_box:nth-child(2n){
+		margin-right:0;
+	}
+	.customer_box:nth-child(3n){
+		margin-right:2%;
+	}
+	.customer_box:nth-child(4n){
+		margin-right:0;
+	}
+	.customer_box:nth-child(6n){
+		margin-right:0;
+	}
+	/* ---------- 회사소개 - 오시는 길 ---------- */
+	.api_box{
+		height:250px;
+	}
+	.location_tit{
+		width:90%;
+		margin: 20px auto 0;
+	}
+	.lo_tr,
+	.transport_box{
+		width:90%;
+		margin:0  auto;
+		font-size:14px;
+	}
+	.transport_in.train {
+    	padding: 10px 20px 20px 20px;
+	}
+	.transport_in.bus {
+    	padding: 10px 20px 20px 0px;
+	}
+	.transport_in p{
+		font-size:15px;
+	}
+	.transport_in p span{
+		width:40px;
+		font-size:15px;
+	}
+	.transport_in p span.sign{
+		width:17%;
+	}
+	.transport_in p span.transport_txt{
+		width:81%;
+	}
+
+	/* ---------- 회사소개 - 기업소개 ---------- */
+	.company_cont{
+		background-size:100%;
+	}
+	.illust_wrap{
+		width:750px;
+		height:590px;
+	}
+	.circle_line{
+		width:400px;
+		height:400px;
+		padding:8px;
+		margin-left:-200px;
+	}
+	.earth_bg{
+		width:384px;
+		height:384px;
+	}
+	.box_change{
+		width:188px;
+		top:128px;
+		font-size:20px;
+	}
+	.box_change:after{
+		right:-23px;
+		width:30px;
+	}
+	.box_change strong{
+		width:188px;
+		font-size:20px;
+	}
+	.box_change p{
+		font-size:16px;
+	}
+	.ico_communication{
+		right:125px;
+		top:295px;
+	}
+	.box_communication:after{
+		top:-28px;
+		height:35px;
+		background-position: -10px -42px;
+	}
+	.box_communication strong{
+		font-size:20px;
+		width:188px;
+	}
+	.box_communication p{
+		font-size:16px;
+	}
+	.box_challenge{
+		
+		width:188px;
+		top:128px;
+	}
+	.box_challenge:after{
+		right:-23px;
+		width:30px;
+		background-position: -60px -26px;
+	}
+	.box_challenge strong{
+		width:188px;
+		font-size:20px;
+	}
+	.box_challenge p{
+		font-size:16px;
+	}
+	.ico_change{
+		left:180px;
+		top:295px;
+	}
+	/* ---------- 회사소개 - C.I 소개 ---------- */
+	.symbol_box{
+		padding:30px 40px 40px;
+	}
+	.symbol_txt {
+	    width: 100%;
+	    float: inherit;
+	}
+	.symbol_img {
+	    width: 100%;
+	    float: inherit;
+	    margin-top: 20px;
+	}
+	.color_red{
+		height: 170px;
+		background-position: 0 27px;
+	}
+	.color_red strong{
+		height:auto;
+		padding:20px 30px 5px 30px;
+	}
+	.color_red.orange strong{
+		padding:20px 10px 5px 30px;
+	}
+	.color_red p {
+    	display: block;
+    	padding: 0 0 0 30px;
+	}
+	.logo_div.two img{
+		width:40%;
+		padding:0 10%;
+	}
+	.logo_div img{
+		width:80%;
+		padding:inherit;
+	}
+	/* ---------- 회사소개 - 주요 계열사 ---------- */
+	.form_group_box{
+		width:300px;
+		height:50px;
+		line-height:50px;
+		font-size:24px;
+		margin-bottom:30px;
+	}
+	.form_group_box:after,
+	.lin_form{
+		display: none;
+	}
+	.group_box{
+		width:100%;
+		float:inherit;
+		margin-top:30px;
+	}
+	.group_box:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.group_box:before{
+		height:30px;
+		top:-30px;
+	}
+	.group_head{
+		height:42px;
+		line-height:42px;
+		font-size:18px;
+	}
+	.group_box .logo_box{
+		width:40%;
+		height:180px;
+		float:left;
+		border-bottom:0;
+		border-right:1px solid #ddd;
+	}
+	.group_box .logo_box.affiliate{
+		position:static;
+	}
+	.company_info{
+		width:60%;
+		height: 180px;
+		float:left;
+		padding: 15px 20px 80px;
+	}
+	.company_info.affiliate{
+		width:60%;
+		height: 180px;
+		float:left;
+		padding: 15px 20px 80px;
+	}
+	/* ---------- 방산 사업 - 케비닛 ---------- */
+	.cont_sub_box{
+		margin-top:60px;
+		padding: 20px 0;
+	}
+	.sub_topic::before{
+		top:-83px;
+		height:65px;
+	}
+	.spec_grid{
+		width:40%;
+		height:420px;
+		cursor:default;
+	    padding: 5% 4% 5% 4%;
+	    margin-bottom:15px;
+	}
+	.spec_grid > strong{
+		display: inline;
+	    width: inherit;
+		font-size:28px;
+		margin-bottom:20px;
+	}
+	.spec_grid > strong::before {
+		content:"";
+		position:absolute;
+		bottom:-10px;
+		display:block;
+		width:100%;
+		height:2px;
+		background-color:rgba(255, 255, 255, 0.5);
+	}
+	.spec_grid > strong::after {
+		content:"";
+		position:absolute;
+		bottom:-10px;
+		display:block;
+		width:0%;
+		height:2px;
+		background-color:#fff;
+		transition:all .4s ease-out;
+	}
+	.spec_grid:hover > strong::after,
+	.spec_grid.active > strong::after {
+		width:100%;
+	}
+	.spec_grid > p{
+		display:none;
+	}
+	.spec_cont{
+		padding:15px 20px;
+		box-shadow:inherit;
+	}
+	.spec_cont li{
+		padding:10px;
+	}
+	.spec_cont.antenna_cont,
+	.spec_cont.combine_cont,
+	.spec_cont.system_cont{
+		position:static;
+		float:left;
+		width:60%;
+		height:420px;
+		display:block !important;
+		margin-bottom:15px;
+	}
+	.spec_cont.antenna_cont strong:before,
+	.spec_cont.combine_cont strong:before{
+		left:-50px;
+		border-width:15px;
+		z-index:10;
+	    top: 23px;
+	}
+	.spec_cont.system_cont strong:before{
+		left:-50px;
+		border-width:15px;
+		right:inherit;
+		border-color:transparent #568ad8 transparent transparent;
+		z-index:10;
+		top: 23px;
+	}
+	.img_spec{
+		margin:10px 0;
+		padding:10px;
+	}
+	.btn_spec_close{
+		display:none;
+	}
+	/* ---------- 방산 사업 - 콘솔 ---------- */
+	.console_sub_box::after{
+		top:125px;
+	}
+	.console_info > *{
+		vertical-align:top;
+	}
+	.console_info li{
+		width: 32%;
+    	box-sizing: border-box;
+    	padding:10px 0;
+	}
+	.console_info li::before,
+	.console_info li:nth-child(3)::before{
+		margin-left:-52.5%;
+		top:90px;
+		margin-top:inherit;
+	}
+	.console_info li img{
+		width:150px;
+	}
+	.developmen_form li{
+		width:49%;
+		float:left;
+	}
+	.developmen_form li:first-child, .developmen_form li:nth-child(4){
+		margin:0 0 1% 1%;
+	}
+	.developmen_form li a{
+		height:13em;
+	}
+	.developmen_form li strong{
+		font-size:1.1em;
+	}
+	.competency_part{
+		display:table;
+	}
+	.competency_part > *{
+		vertical-align:middle;
+	}
+	.competency_part .img_product{
+		width:48%;
+		display:table-cell;
+		float:inherit;
+	}
+	.competency_part .img_product img{
+		margin: 0 auto 0 -50px;
+		width:120%;
+		vertical-align:middle;
+		display:inline-block;
+	}
+	.spec_info_form{
+	    width: 52%;
+	    display: inline;
+	    float: inherit;
+	}
+	.spec_detail.type_three li{
+		min-height: 5em;
+	}
+	/* ---------- 민수 사업 - 칩마운터 ---------- */
+	.promotion_cont{
+		padding:40px 0;
+	}
+	.product_dp_box{
+		width:100%;
+		height:430px;
+	}
+	.product_info_inner{
+		padding: 25px 30px;
+	}
+	.product_img.img01{
+		background-position:center -15px;
+	}
+	.product_img.img02{
+		background-position:center -15px;
+		float:right;
+	}
+	.product_info_box.db_box02:before {
+	    border-color: transparent transparent transparent #fe5a0a;
+        right: -34px;
+        left:inherit;
+	}
+	.product_dp_box:hover .product_info_box.db_box02:before{
+		border-color:transparent transparent transparent #de4a02;
+		transition:.3s;
+	}
+	.promotion_video_box{
+		width:100%;
+		height:400px;
+	}
+3	.promotion_video_box video{
+		height:115%;
+		top:-10%;
+		right:-4%;
+	}
+	.promotion_video_box video.video02{
+		width:100%;
+		top:-10%;
+		right:0;
+		height:auto;
+	}
+	.promotion_spec{
+		width:100%;
+		height:440px;
+		margin-top:10px;
+	}
+	/* ---------- 민수 사업 - 협동로봇 ---------- */
+	.product_dp_box.mini {
+	    height: 360px;
+	}
+	.product_img.img03{
+		background-position: center -50px;
+	}
+	.product_img.img04{
+		background-position: center -50px;
+		float:right;
+	}
+	.product_info_box.db_box04:before{
+	    border-color: transparent transparent transparent #2d4674;
+	    left: inherit;
+	    right: -32px;
+	}
+	.product_dp_box:hover .product_info_box.db_box04:before{
+		border-color:transparent transparent transparent #253c65;
+	}
+	.product_img.img05{
+		background-position: center -50px;
+		float:left;
+	}
+	.product_info_box.db_box05:before {
+	    border-color: transparent #1aa2b2 transparent transparent;
+	    left: -34px;
+	    right: inherit;
+	}
+	.product_dp_box:hover .product_info_box.db_box05:before{
+		border-color:transparent #1794a2 transparent transparent ;
+	}
+	.product_img.img06{
+		background-position: center -50px;
+		float:right;
+	}
+	
+	/* 사이트맵
+	===================================================================*/
+	.site_map_body {
+		left:0;
+		margin-left:0;
+		width:100%;
+	}
+}
+
+/* 뷰포트 너비가 최대 765px 이하 */
+@media all and (max-width:767px){
+
+	/* 공통 */
+	.util .btn_groupware{
+		display: none;
+	}
+	.gnb{
+		display:none;
+	}
+	.remote{
+		display: none;
+	}
+	.util .language{
+		display:none;
+	}
+	.main_video .thevideo_box{
+		position:absolute;
+		left:-9999999em;
+		top:-9999999em;
+		margin-left:999999999px;
+	}
+	/* 서브 헤드 */
+	.sub_head{
+		height:150px;
+	}
+	.sub_head.community{
+		background-size:120%;
+	    background-position: 60%;
+	}
+	.sub_head .sub_head_inner{
+		width:90%;
+		padding-top:36px;
+	}
+	.sub_head .sub_head_inner a{
+		display: none;
+	}
+	.sub_head .sub_head_inner strong{
+		font-size:25px;
+	}
+	.sub_head .sub_head_inner p{
+		font-size:14px;
+		line-height:18px;
+	}
+
+	/* 서브 컨텐츠 */
+	.sub_cont_inner{
+		width:90%;
+	}
+	.company_topic {
+	    padding-top: 35px;
+	    padding-bottom: 25px;
+	    font-size: 26px;
+	    line-height: 33px;
+	}
+	.tit_explain {
+	    padding: 0 50px;
+	    width: 100%;
+	    font-size: 16px;
+	    line-height: 22px;
+	    box-sizing: border-box;
+	}
+
+	/* 풋터 */
+	footer .foot_info li{
+		display:inline-block;
+	}
+	footer address div{
+		float:inherit;
+		margin-bottom:20px;
+	}
+	footer address img{
+		float:inherit;
+	}
+	/* 풋터 - 동영상보기 팝업 */
+	.pup_wrap.video {
+   		margin-left: -240px;
+	    margin-top: -190px;
+	    width: 474px;
+	    height: 300px;
+	}
+
+	/* ----------공지사항 ---------- */
+	/* 공지사항 - 상단검색 */
+	.community_search{
+		display:none;
+	}
+
+	/* 공지사항 - 리스트 */
+	.notice_box{
+		width:100%;
+		margin-right:0;
+	}
+
+	/* 공지사항 - 하단검색 */
+	.bottom_search{
+		display:block;
+	}
+	.btn_open{
+		display:inline-block;
+	}
+
+	/* 공지사항 - 내용보기 팝업 */
+	.pup_wrap{
+	   	position: fixed;
+	    left: 0;
+	    right: 0;
+	    margin: 0;
+	    top: 0;
+	    bottom: 0;
+	    width:100%;
+	    height:100%;
+	}
+	.pup_cont{
+		position: fixed;
+	    left: 0;
+	    right: 0;
+	    margin: 0;
+	    top: 130px;
+	    bottom: 0;
+		width:auto;
+		height:auto;
+	}
+	.pup_cont_head{
+		height:80px;
+	}
+	.pup_cont_head strong{
+		width:100%;
+	}
+	.pup_cont_head .pup_head_util{
+		width:100%;
+		margin-top:-15px;
+	}
+	.pup_cont_head .pup_head_util span{
+	    background: url(../img/pup/ico_notice_util_big.png) no-repeat 0px 14px;
+	    background-size:18px;
+	}
+	.pup_cont_head .pup_head_util span.notice_print{
+	    background-position: 0px -41px;
+	}
+	.add_file_box .add_file_tit strong{
+		 background: url(../img/pup/ico_notice_util_big.png) no-repeat 0px -105px;
+		 background-size:17px;
+		 padding-left:20px;
+	}
+	.add_file_box .add_file_tit .btn_add_open{
+	     background: url(../img/pup/ico_notice_util_big.png) no-repeat 27px -126px;
+  		 background-size: 14px;
+	}
+	.add_file_box .add_file_list .btn_download{
+	     background: url(../img/pup/ico_notice_util_big.png) no-repeat 0px -143px;
+  		 background-size: 16px;
+  		 padding-left:23px;
+	}
+	/* ---------- 회사소개 - 주요연혁 ---------- */
+	.history_cont {
+		padding:2em 0 0;
+	}
+	.history_cont .history_title {
+		position: relative;
+		top:0;
+	    right: 0;
+	    bottom: auto;
+	    width: 100%;
+	    background-position: left bottom;
+	    background-size: 7em;
+	}
+	.history_cont .history_title strong {
+	    padding: 15px 30px;
+	    font-size: 24px;
+	    background-position: right 0;
+	    background-size: 7em;
+	}
+	.diagonal_line {
+	    margin-top: 0;
+	    margin-left: -14em;
+	}
+	.history_cont ul {
+	    padding-top: 2em;
+	    padding-left: 0;
+	}
+
+	/* ---------- 회사소개 - 주요 계열사 ---------- */
+	.customer_box{
+		width:49%;
+		margin-right:2%;
+	}
+	.customer_box:nth-child(2n){
+		margin-right:0;
+	}
+	.customer_box:nth-child(3n){
+		margin-right:2%;
+	}
+	.customer_box:nth-child(4n){
+		margin-right:0;
+	}
+	.customer_box:nth-child(6n){
+		margin-right:0;
+	}
+	.customer_info strong{
+		font-size:20px;
+	}
+	.btn_website span{
+	    background: url(../img/company/ico_btn_website_big.png) no-repeat 0px 0px;
+	    background-size:22px;
+	}
+	.customer_box:hover .btn_website span{
+	    background: url(../img/company/ico_btn_website_hover_big.png) no-repeat 0px 0px;
+	    background-size:22px;
+	}
+	/* ---------- 회사소개 - 오시는 길 ---------- */
+	.location_tab{
+		font-size:16px;
+	}
+	.api_box{
+		height:250px;
+	}
+	.location_tit{
+		width:90%;
+		margin: 20px auto 0;
+	}
+	.lo_tr,
+	.transport_box{
+		width:90%;
+		margin:0  auto;
+		font-size:14px;
+	}
+	.lo_tr .lo_th{
+		width:30%;
+	}
+	.lo_tr .lo_td{
+		width:70%;
+	}
+	.transport_in{
+		width:100%;
+		min-height:inherit;
+	}
+	.transport_in.train {
+    	padding: 5px 30px 5px;
+	}
+	.transport_in.bus {
+    	padding: 5px 30px 20px;
+	}
+	.transport_in p{
+		font-size:14px;
+	}
+	.transport_in p span{
+		width:40px;
+		font-size:15px;
+	}
+	.transport_in p span.sign{
+		width:17%;
+	}
+	.transport_in p span.transport_txt{
+		width:81%;
+	}
+	/* ---------- 회사소개 - 기업소개 ---------- */
+	.company_cont{
+		background:url(../img/company/bg_virtual_lin.png), #f6f4f7 url(../img/company/img_company.png);
+		background-position: center 80px, center;
+		background-size: auto, 100%;
+		background-repeat: no-repeat, no-repeat;
+		padding-top:20px;
+		padding-bottom:10px;
+	}
+	.illust_wrap{
+		width:100%;
+		height: auto;
+	}
+	.circle_line{
+		display: none;
+	}
+	.ico_challenge,
+	.ico_communication,
+	.ico_change{
+		position:static;
+		margin:10px auto;
+	}
+	.box_challenge,
+	.box_communication,
+	.box_change{
+	    position: relative;
+	    margin: 0 auto 20px;
+	    left: 50%;
+	    width: 240px;
+	    background-color: #f6f4f7;
+	    margin-left: -120px;
+	    top: inherit;
+	    bottom:inherit;
+	    z-index:10;
+	    padding-bottom:10px;
+	}
+	.box_challenge:after,
+	.box_communication:after,
+	.box_change:after{
+		display: none;
+	}
+	/* ---------- 회사소개 - C.I 소개 ---------- */
+	.ci_cont {
+	    width: 90%;
+	    padding: .5em 0 0;
+	}
+	.symbol_box{
+		padding:30px 40px 40px;
+	}
+	.symbol_txt {
+	    width: 100%;
+	    float: inherit;
+	}
+	.symbol_txt strong {
+	    font-size: 24px;
+	    margin-bottom: 20px;
+	    text-align: center;
+	    line-height: 28px;
+	}
+	.ci_tit strong {
+	    font-size: 24px;
+	}
+	.symbol_img {
+	    width: 100%;
+	    float: inherit;
+	    margin-top: 20px;
+	}
+	.color_red{
+		height: 160px;
+		background-position: 0 27px;
+	}
+	.color_red strong{
+		height:auto;
+		padding:15px 20px 5px 20px;
+	}
+	.color_red.orange strong{
+		padding:15px 10px 5px 20px;
+	}
+	.color_red p {
+    	display: block;
+    	padding: 0 0 0 20px;
+	}
+	.logo_div {
+	    width: 49%;
+	    margin: 5px 0px;
+	    font-size: 14px;
+	}
+	.logo_div.two img{
+		width: 60%;
+   		padding: 0 10%;
+	}
+	.logo_div img{
+		width:65%;
+		padding:0 6%;
+	}
+	.btn_download_gp a {
+	    width: 49%;
+	    float: left;
+	    margin: 0;
+	    height: 45px;
+	    line-height: 43px;
+	    font-size: 16px;
+	}
+	.btn_download_gp a.btn_jpg_download {
+	    float: right;
+	}
+	/* ---------- 회사소개 - 주요 계열사 ---------- */
+	.form_group_box{
+		width:300px;
+		height:50px;
+		line-height:50px;
+		font-size:24px;
+		margin-bottom:30px;
+	}
+	.form_group_box:after,
+	.lin_form{
+		display: none;
+	}
+	.group_box{
+		width:100%;
+		float:inherit;
+		margin-top:30px;
+	}
+	.group_box:after{
+		content: "";
+		display: block;
+		clear: both;
+	}
+	.group_box:before{
+		height:30px;
+		top:-30px;
+	}
+	.group_head{
+		height:42px;
+		line-height:42px;
+		font-size:18px;
+	}
+	.group_box .logo_box{
+		width:100%;
+		height:100px;
+		float:left;
+	}
+	.group_box .logo_box.affiliate{
+		position:static;
+	}
+	.group_box .logo_box img{
+		width:200px;
+	}
+	.company_info{
+		width:100%;
+		height: auto;
+		min-height:160px;
+		float:left;
+		padding: 15px 20px 80px;
+	}
+	.company_info.affiliate{
+		width:100%;
+		height: auto;
+		min-height:160px;
+		float:left;
+		padding: 15px 20px 80px;
+	}
+	/* ---------- 방산 사업 - 케비닛 ---------- */
+	/* 방산 사업 탭 */
+	.bx-viewport{
+		height:345px;
+	}
+	.bx-wrapper .bx-controls-direction{
+		right:1px;	
+	}
+	.slider .slider_info{
+		margin:0 auto;
+		width:100%;
+		border-left:1px solid #ddd;
+		border-right:1px solid #ddd;
+	}
+	.txt_capability{
+		width:100%;
+		padding: 5% 8%;
+	}
+	/* ---------- 방산 사업 - 케비닛 ---------- */
+	.cont_sub_box{
+		margin-top:45px;
+		padding: 15px 0;
+	}
+	.sub_topic{
+		margin-top:20px;
+		font-size:26px;
+	}
+	.tit_sub_explain{
+		font-size:16px;
+		padding: 0 50px;
+	}
+	.sub_topic::before{
+		top:-56px;
+		height:40px;
+	}
+	.spec_grid{
+		width:100%;
+		height:270px;
+		cursor:default;
+		text-align:center;
+	}
+	.spec_grid > strong{
+		display: inline-block;
+		font-size:28px;
+		margin-bottom:10px;
+		margin-top:88px;
+	}
+	.spec_grid > strong::before {
+		content:"";
+		position:absolute;
+		bottom:-10px;
+		left:0;
+		display:block;
+		width:100%;
+		height:2px;
+		background-color:rgba(255, 255, 255, 0.5);
+	}
+	.spec_grid > strong::after {
+		content:"";
+		position:absolute;
+		bottom:-10px;
+		left:0;
+		display:block;
+		width:0%;
+		height:2px;
+		background-color:#fff;
+		transition:all .4s ease-out;
+	}
+	.spec_grid:hover > strong::after,
+	.spec_grid.active > strong::after {
+		width:100%;
+	}
+	.spec_grid > p{
+		display:none;
+	}
+	.spec_cont{
+		padding:15px 20px 25px;
+		box-shadow:inherit;
+	}
+	.spec_cont strong{
+		text-align:center;
+	}
+	.spec_cont li{
+		padding:10px;
+	}
+	.spec_cont.antenna_cont,
+	.spec_cont.combine_cont,
+	.spec_cont.system_cont{
+		position:static;
+		float:left;
+		width:100%;
+		height:auto;
+		display:block !important;
+		margin-bottom:15px;
+	}
+	.spec_cont.system_cont{
+		margin-bottom:0;
+	}
+	.spec_cont.antenna_cont strong:before{
+	    border-width: 15px;
+	    top: -45px;
+	    z-index: 10;
+	    left: 50%;
+	    margin-left: -16px;
+        border-color: transparent transparent #ff7a22 transparent;
+	}
+	.spec_cont.combine_cont strong:before{
+		border-width: 15px;
+	    top: -45px;
+	    z-index: 10;
+	    left: 50%;
+	    margin-left: -16px;
+        border-color: transparent transparent #8eae10 transparent;
+	}
+	.spec_cont.system_cont strong:before{
+		 border-width: 15px;
+	    top: -45px;
+	    z-index: 10;
+	    left: 50%;
+	    margin-left: -16px;
+        border-color: transparent transparent #568ad8 transparent;
+	}
+	.img_spec{
+		margin:10px 0;
+		padding:10px;
+	}
+	.img_spec img{
+		width:80%;
+	}
+	.btn_spec_close{
+		display:none;
+	}
+	/* ---------- 민수사업 - 칩마운터  ---------- */
+	.product_dp_wrap{
+		margin: 0 auto 30px;
+	}
+	.product_dp_box{
+		width:100%;
+		height:auto;
+		margin-bottom:15px;
+	}
+	.product_dp_box.mini{
+		height:auto;
+	}
+	.product_img{
+		width:100%;
+		height:230px;
+	}
+	.product_img.img01{
+	    background-size: 600px;
+   		background-position: center -22px;
+	}
+	.product_img.img02{
+	    background-size: 600px;
+   		background-position: center -22px;
+	}
+	.product_info_box{
+		width:100%;
+	}
+	.product_info_box:before{
+		left:50%;
+		top:-17px;
+		margin-left:-17px;
+		border-color:transparent transparent #ff8647 transparent;
+	}
+	.product_dp_box:hover .product_info_box:before{
+		border-color:transparent transparent #ff6e38 transparent;
+	}
+	.product_info_box.db_box02:before{
+		border-color:transparent transparent #fe5a0a  transparent;
+	}
+	.product_dp_box:hover .product_info_box.db_box02:before{
+		border-color:transparent transparent #de4a02 transparent;
+	}
+	.product_info_inner{
+		padding:20px 20px 40px;
+	}
+	.product_dp_tit{
+		font-size:22px;
+	}
+	.product_dp_txt{
+		margin-bottom:10px;
+	}
+	.product_cont_txt{
+		margin-bottom:10px;
+	}
+	.console_sub_box{
+		padding:15px 0;
+	}
+	.console_sub_box::after{
+	    height: 100%;
+	    width: 1px;
+	    left: 50%;
+	    top: 0;
+	}
+	.console_info > *{
+		vertical-align:top;
+	}
+	.console_info li{
+		width: 100%;
+    	box-sizing: border-box;
+    	padding:7px 0;
+	}
+	.console_info li::before,
+	.console_info li:nth-child(3)::before{
+		display:none;
+	}
+	.console_info li img{
+		width:150px;
+	}
+	.console_info li strong{
+		background-color: #f6f4f7;
+		font-size:16px;
+		padding-top: 5px;
+	    margin-top: 10px;
+	}
+	.console_info li p{
+		background-color: #f6f4f7;
+		font-size:15px;
+	    padding-top: 4px;
+	    padding-bottom: 5px;
+	}
+	.sub_topic_type{
+		font-size:26px;
+	    padding: 0px 10px;
+   		word-break: keep-all;
+	}
+	.promotion_tit{
+		font-size:26px;
+	}
+	.promotion_txt{
+		font-size:16px;
+	}
+	.developmen_form{
+		padding-bottom:35px;
+	}
+	.developmen_form li{
+		width:100%;
+		float:inherit;
+		margin:0 0 1% 0;
+	}
+	.developmen_form li a{
+		height:10em;
+		padding:5%;
+	}
+	.developmen_form li img{
+		bottom:10%;
+		width:30px;
+	    margin-left: -15px;
+	}
+	.developmen_form li span{
+		height:35px;
+	}
+	.developmen_form li a > span::after{
+		margin: 5px auto;
+	}
+	.competency_part{
+		padding-top:20px;
+	}
+	.competency_part .img_product{
+		width:100%;
+		display:block;
+	}
+	.competency_part .img_product img{
+		margin: 0 auto;
+		width:70%;
+	}
+	.spec_info_form{
+		width:100%;
+	}
+	.spec_info_form strong{
+		font-size:1.4em;
+	    padding-bottom: 6px;
+	}
+	.spec_mim_tit{
+		margin-bottom:8px;
+	}
+	.spec_detail.type_three li{
+		width:50%;
+		height:4em;
+	}
+	.spec_detail.type_three li.full_li{
+		width:100%;
+		border-left:0;
+	}
+	.spec_detail.type_three li.bd_none{
+		border-left:0;
+	}
+	.spec_detail.type_three li.bd{
+		border-left:1px solid #ddd;
+	}
+	.spec_exam_p.mt{
+		margin-top:10px;
+	}
+	.spec_detail{
+		margin-top:10px;
+	}
+	.spec_detail li span{
+		font-size:14px;
+	}
+	.promotion_video_box{
+		width:100%;
+		height:310px;
+	}
+	.promotion_video_box video{
+		height:115%;
+		top:-10%;
+		right:-4%;
+	}
+	.promotion_video_box video.video02{
+		height: 155%;
+	    top: -20%;
+	    right: 0;
+	}
+	.promotion_spec{
+		width:100%;
+		height:440px;
+		margin-top:10px;
+	}
+	.promotion_cont{
+		padding: 30px 0;
+	}
+	/* ---------- 민수 사업 - 협동로봇 ---------- */
+	.product_img.img03{
+	    background-position: center -22px;
+    	background-size: 480px;
+	}
+	.product_info_box.db_box03:before {
+	    border-color: transparent transparent #828a93 transparent;
+	}
+	.product_dp_box:hover .product_info_box.db_box03:before{
+		border-color:transparent transparent #6b747f transparent;
+	}
+	.product_img.img04{
+		background-position: center -22px;
+		background-size:480px;
+		float:right;
+	}
+	.product_info_box.db_box04:before{
+	    border-color: transparent transparent #2d4674 transparent;
+        left: 50%;
+    	right: inherit;
+	}
+	.product_dp_box:hover .product_info_box.db_box04:before{
+		border-color:transparent transparent #253c65 transparent;
+	}
+	.product_img.img05{
+		background-position: center -22px;
+		background-size:480px;
+		float:left;
+	}
+	.product_info_box.db_box05:before {
+	    border-color: transparent transparent #1aa2b2 transparent;
+	    left: 50%;
+    	right: inherit;
+	}
+	.product_dp_box:hover .product_info_box.db_box05:before{
+		border-color:transparent transparent #1794a2 transparent ;
+	}
+	.product_img.img06{
+		background-position: center -22px;
+		background-size:480px;
+		float:right;
+	}
+	.product_info_box.db_box06:before {
+	    border-color: transparent transparent #296aae transparent;
+	    left: 50%;
+    	right: inherit;
+	}
+	.product_dp_box:hover .product_info_box.db_box06:before{
+		border-color:transparent transparent #20568e transparent ;
+	}
+	/* 사이트맵
+	===================================================================*/
+	.site_map_body {
+		top:0;
+		bottom:0;
+		left:0;
+		margin-top:0;
+		margin-left:0;
+		width:100%;
+	}
+	.site_map_body::before {
+		top:-9999em;
+		height:0;
+		background-color:transparent;
+	}
+	.site_part {
+		float:none;
+		width:100%;
+	}
+	.site_part::before {
+		content:"";
+		position:absolute;
+		top:-99999em;
+		width:0;
+		height:0;
+		background-color:transparent;
+	}
+	/* 대타이틀 */
+	.site_part .site_topic {
+		padding:20px 20px 20px 60px; 
+		border-left:0;
+	}
+	.site_part .site_topic strong {
+		font-size:18px;
+	}
+	.site_part .site_topic p {
+		display:none;
+	}
+	.site_part ul {
+		padding:15px;
+		overflow:hidden;
+	}
+	.site_part li {
+		float:left;
+		width:50%;
+	}
+	.site_part li:nth-child(1),
+	.site_part li:nth-child(2) {
+		margin-top:0;
+	}
+	
+	/* 아이콘 */
+	.site_topic::before {
+		top:12px;
+		left:10px;
+		width:35px;
+		height:35px;
+		background:url(../img/pup/ico_site_s_map.gif) no-repeat 0 0;
+		background-size:100%; 
+	}
+	.site_topic.company::before {
+		background-position:0 0;
+		background-size:35px;
+	}
+	.site_topic.business::before {
+		background-position:0 -35px;
+		background-size:35px;
+	}
+	.site_topic.community::before {
+		background-position:0 -70px;
+		background-size:35px;
+	}
+	
+	.business_ul.business_left,
+	.business_ul.business_right {
+		padding:0 15px;
+	}
+	
+	/* sitemap bottom */
+	.site_util li {
+		width:50%;
+		height:auto;
+		border:1px solid #ddd;
+		border-width:1px 0 0 1px;
+	}
+	.site_util li a {
+		margin:0 10px;
+		line-height:50px;
+	}
+		/* 댣기버튼 */
+	.btn_site_close {
+		top:0;
+		right:-3px;
+	}
+	
+	
+}
+@media all and (max-width:500px){
+
+	/* 서브 컨텐츠 */
+	.tit_explain {
+	    padding: 20px;
+	    margin: 0 auto;
+	    box-sizing: border-box;
+	    font-size:15px;
+	    line-height: 19px;
+	}
+	/* 풋터 - 동영상보기 팝업 */
+	.pup_wrap.video {
+   		margin-left: -205px;
+	    margin-top: -157px;
+	    width: 409px;
+	    height: 252px;
+	}
+	/* ---------- 회사소개 - 주요연혁 ---------- */
+	/* 회사소개 탭 */
+	ul.tabs li {
+		width:33.3%;
+	}
+	ul.tabs li:nth-child(1),
+	ul.tabs li:nth-child(4) {
+	    width: 33.4%;
+	}
+	ul.tabs li:nth-child(3n){
+	    border-right:0;
+	}
+	.history_cont {
+	    width: 90%;
+	    padding: 2em 0 0;
+	    margin: 0 auto 0;
+	}
+	.history_cont .history_title {
+		position:relative;
+		top:0px;
+	}
+	.history_cont .history_title strong {
+	    padding: 9px 30px;
+	    font-size: 22px;
+	    background-position: right 0;
+	    background-size: 7em;
+	}
+	.history_title .diagonal_line {
+	    margin-left: -4em;
+	}
+	.history_cont ul {
+	    padding-top: 2em;
+	    padding-left: 0;
+	}
+	.history_cont ul > li span {
+	    float: none;
+	    width: 100%;
+	    height: 35px;
+	    line-height: 32px;
+	    color: #fff;
+	    font-size: 18px;
+	    background-color: #4a4a4a;
+	}
+	.history_data {
+	    width: 100%;
+	}
+	.history_cont li, .history_data {
+		border: 0;
+	}
+	.history_cont dl:first-child dt{
+	    padding-top: 24px;
+	}
+	.history_cont dl:first-child dd {
+	    padding-top: 24px;
+	}
+	.history_cont dl:first-child dt:after {
+	    top: 30px;
+	}
+	.history_cont dl dt:after{
+		top:8px;
+	}
+	.history_cont dl dd{
+		font-size:15px;
+		line-height:18px;
+	}
+	.history_cont dl:last-child dd{
+		padding-bottom:30px;
+	}
+	/* ---------- 회사소개 - 주요 계열사 ---------- */
+	.cont_inner{
+		width:90%;
+	}
+	.customer_box{
+		width:100%;
+		margin-right:0%;
+	}
+	.customer_info{
+		min-height:215px;
+	}
+	.customer_info strong{
+		font-size:18px;
+	}
+	/* ---------- 회사소개 - 기업소개 ---------- */
+	.company_cont{
+		background:  #f6f4f7 url(../img/company/bg_virtual_lin.png) no-repeat center 80px;
+	}
+	.box_challenge strong,
+	.box_communication strong,
+	.box_change strong{
+		font-size:16px;
+	}
+	.box_challenge p,
+	.box_communication p,
+	.box_change p{
+		font-size:14px;
+		word-break: keep-all;
+	}
+	/* ---------- 회사소개 - C.I 소개 ---------- */
+	.symbol_box{
+		padding:20px 30px 30px;
+	}
+	.symbol_txt {
+	    width: 100%;
+	    float: inherit;
+	}
+	.symbol_txt strong {
+	    font-size: 24px;
+	    margin-bottom: 20px;
+	    text-align: center;
+	    line-height: 28px;
+	}
+	.ci_tit {
+	    margin-top: 30px;
+	}
+	.ci_tit_p{
+		margin-top:20px;
+	}
+	.symbol_txt strong, .ci_tit strong {
+	    font-size: 20px;
+	    margin-bottom: 12px;
+	    text-align: center;
+	}
+	.ci_tit strong:before {
+	    left: 50%;
+	    margin-left: -15px;
+	}
+	.ci_tit p{
+		font-size:15px;
+		line-height: 20px;
+	}
+	.symbol_img {
+	    width: 100%;
+	    float: inherit;
+	    margin-top: 20px;
+	}
+	.color_red{
+		width:49%;
+		height: auto;
+		min-height:120px;
+		background-position: 0 27px;
+		margin-bottom:5px;
+	}
+	.color_red strong {
+	    display: block;
+	    padding:10px 0 5px;
+	    font-size: 20px;
+	    line-height: 24px;
+	    width: 40%;
+	    margin: 0 auto;
+	    text-align: center;
+	}
+	.color_red.orange{
+		margin-left:2%;
+		margin-bottom:2%;
+	}
+	.color_red.orange strong{
+		padding:10px 0 5px;
+	}
+	.color_red p {
+    	display: block;
+    	padding: 0;
+    	text-align: center;
+    	line-height: 15px;
+    	font-size:12px;
+	}
+	.color_red.black{
+		width:100%;
+	}
+	.logo_gp{
+		padding:10px 30px;
+	}
+	.logo_div {
+	    width: 100%;
+	    margin: 5px 0px;
+	    font-size: 14px;
+	}
+	.logo_div.two{
+		width:100%;
+	}
+	.logo_div.two img{
+		width: 60%;
+   		padding: 0 0 0 10%;
+	}
+	.logo_div img{
+		width:60%;
+		padding:0 0 0 10%;
+	}
+	.btn_download_gp a {
+	    width: 49%;
+	    float: left;
+	    margin: 0;
+	    height: 45px;
+	    line-height: 43px;
+	    font-size: 16px;
+	}
+	.btn_download_gp a.btn_jpg_download {
+	    float: right;
+	}
+	/* ---------- 회사소개 - 주요 계열사 ---------- */
+	.form_group_box{
+		width:100%;
+		font-size:20px;
+		height:44px;
+		line-height:46px;
+	}
+	.group_head{
+		height:36px;
+		line-height:39px;
+		font-size:18px;
+	}
+	/* ---------- 회사소개 - 오시는 길 ---------- */
+	.transport_in p span.sign{
+		width:24%;
+	}
+	.transport_in p span.transport_txt{
+		width:74%;
+	}
+	/* ---------- 방산 사업 - 케비닛 ---------- */
+	/* 방산 사업 탭 */
+	ul.tabs.tow_tabs li{
+		width:50%;
+	}
+	ul.tabs.tow_tabs li:nth-child(2){
+		border-right:0;
+	}
+	.slider .slider_info{
+		line-height:inherit;
+	    padding: 5% 8%;
+        height: 75px;
+	}
+	.slider .slider_info strong{
+		line-height:20px;
+	}
+	.slider .slider_info strong:first-child::after{
+		display:none;	
+	}
+	.slider .slider_info strong:nth-child(2){
+		font-size:16px;
+	}
+	.slider .slider_info p{
+		display:block;
+		line-height:20px;
+		padding:0;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		overflow:hidden;
+		font-size:15px;
+		margin-top: 3px;
+	}
+	.bx-wrapper .bx-controls-direction{
+		right:0px;
+		bottom:75px;
+	}
+	.bx-wrapper .bx-controls-direction a{
+		width:40px;
+		height:40px;
+		background: rgba(255,255,255,0.6) url(../img/sub/slider_small_controll.png) no-repeat 0 0;
+		border: 1px solid rgba(255,255,255,0.5);
+  		border-width: 1px 0px 0px 1px;
+	}
+	.bx-wrapper .bx-controls-direction a.bx-prev{
+		background-position:8px center;
+		background-size: 94px;
+	}
+	
+	.bx-wrapper .bx-controls-direction a.bx-prev:hover{
+		background: rgba(255,255,255,0.8) url(../img/sub/slider_small_controll_hover.png) no-repeat 8px center;
+		background-size: 94px;
+	}
+	.bx-wrapper .bx-controls-direction a.bx-next{
+		    background-position: -66px center;
+		    background-size: 94px;
+	}
+	.bx-wrapper .bx-controls-direction a.bx-next:hover{
+		background: rgba(255,255,255,0.8) url(../img/sub/slider_small_controll_hover.png) no-repeat -66px center;
+		background-size: 94px;
+	}
+	.txt_capability p{
+		font-size:15px;
+		margin-top: 3px;
+	}
+	.txt_capability strong{
+		font-size:16px;
+	}
+	/* ---------- 방산 사업 - 케비닛 ---------- */
+	.cont_sub_box{
+		margin-top:45px;
+		padding: 15px 0;
+	}
+	.sub_topic{
+		margin-top:20px;
+		font-size:26px;
+	}
+	.tit_sub_explain{
+		padding: 20px;
+	    margin: 0 auto;
+	    box-sizing: border-box;
+	    font-size: 15px;
+	    line-height: 19px;
+	}
+	.sub_topic::before{
+		top:-56px;
+		height:40px;
+	}
+	.spec_grid{
+		width:100%;
+		height:200px;
+		cursor:default;
+		text-align:center;
+	    padding: 5% 0;
+	}
+	.spec_grid > strong{
+		font-size:26px;
+		margin-bottom:6px;
+		margin-top:64px;
+	}
+	.spec_grid > strong::before{
+		bottom:-5px;
+	}
+	.spec_grid > strong::after {
+		bottom:-5px;
+	}
+	.spec_cont{
+		padding:15px 20px 25px;
+		box-shadow:inherit;
+	}
+	.spec_cont strong{
+		text-align:center;
+	}
+	.spec_cont li{
+		padding:10px;
+	}
+	.spec_cont.antenna_cont,
+	.spec_cont.combine_cont,
+	.spec_cont.system_cont{
+		position:static;
+		float:left;
+		width:100%;
+		height:auto;
+		display:block !important;
+		font-size:15px;
+		margin-bottom:15px;
+	}
+	.spec_cont.system_cont{
+		margin-bottom:0;
+	}
+	.spec_cont.antenna_cont strong:before{
+	    border-width: 15px;
+	    top: -45px;
+	    z-index: 10;
+	    left: 50%;
+	    margin-left: -16px;
+        border-color: transparent transparent #ff7a22 transparent;
+	}
+	.spec_cont.combine_cont strong:before{
+		border-width: 15px;
+	    top: -45px;
+	    z-index: 10;
+	    left: 50%;
+	    margin-left: -16px;
+        border-color: transparent transparent #8eae10 transparent;
+	}
+	.spec_cont.system_cont strong:before{
+		 border-width: 15px;
+	    top: -45px;
+	    z-index: 10;
+	    left: 50%;
+	    margin-left: -16px;
+        border-color: transparent transparent #568ad8 transparent;
+	}
+	.img_spec{
+		margin:10px 0;
+		padding:10px;
+	    min-height: inherit;
+	}
+	.img_spec img{
+		width:80%;
+	}
+	.btn_spec_close{
+		display:none;
+	}
+	/* ---------- 방산 사업 - 콘솔 ---------- */
+	.spec_info_form strong{
+		font-size:1.2em;
+	}
+	.tb1 tbody td{
+		font-size:15px;
+	}
+	/* ---------- 민수 사업 - 칩마운터 ---------- */
+	.product_img{
+		width:100%;
+	}
+	.product_info_box{
+		width:100%;
+	}
+	.product_dp_tit{
+		font-size:20px;
+		line-height:24px;
+	}
+	.product_cont_txt{
+		font-size:15px;
+	    line-height: 20px;
+	}
+	.promotion_tit{
+		padding-top:20px;
+	}
+	.promotion_txt{
+		font-size:15px;
+	    margin: 10px auto 20px;
+	}
+	.promotion_video_box{
+		width:100%;
+		height:200px;
+	}
+	.promotion_video_box video{
+		height:115%;
+		top:-10%;
+		right:-4%;
+	}
+	.promotion_spec{
+		width:100%;
+		height:auto;
+		margin-top:10px;
+	}
+	.tb1 tbody td{
+		height:60px;
+		padding:7px;
+	}
+	.tb1 tbody td p{
+		font-size:15px;
+		margin-top:5px;
+	}
+	.tb1 tbody td span.ico{
+		width:45px;
+		height:45px;
+	}
+	.ico.spec_ico1,
+	.ico.spec_ico2,
+	.ico.spec_ico3,
+	.ico.spec_ico4,
+	.ico.spec_ico5,
+	.ico.spec_ico6,
+	.ico.spec_ico7,
+	.ico.spec_ico8,
+	.ico.spec_ico9,
+	.ico.spec_ico10,
+	.ico.spec_ico11{
+		background-size:66px;
+	}
+	
+	/* header 사이즈 조절 
+	=============================================*/
+	header {
+		height:3.15em;
+	    line-height:3.15em;
+	}
+	header h1 img {
+		margin-left:-10px;
+		padding-top:0;
+		height:100%;
+	}
+	.btn_sitemap {
+		width:50px;
+		height:3.15em;
+	}
+	.btn_sitemap span {
+		left:13px;
+		right:13px;
+	}
+	.btn_sitemap span:nth-of-type(1) {
+		top:16px;
+	}
+	.btn_sitemap span:nth-of-type(2) {
+		top:32px;
+	}
+	.btn_sitemap span:nth-of-type(3) {
+		top:24px;
+	}
+	/* content padding 조절
+	=============================================*/
+	#section0, #section1, #section2 {
+		padding-top:3.15em;
+	}
+	.content {
+		padding-top:50px;
+	}
+	
+	/* 사이트맵 height 조절
+	=============================================*/
+	.site_part .site_topic {
+		padding:16px 15px 14px 55px;
+	}
+	.site_part ul {
+		padding:10px 15px;
+	}
+	.site_topic::before {
+		top:8px;
+	}
+	.business_ul strong {
+		padding:15px 10px 9px;
+		font-size:15px;
+	}
+	.site_part li {
+		margin-top:10px;
+	}
+	.site_part li a {
+		font-size:.95em;
+	}
+	/* 닫기버튼 */
+	.btn_site_close {
+		width:50px;
+		height:50px;
+		background:url(../img/pup/ico_site_s_close.gif) no-repeat 0 0;
+		background-size:50px; 
+	}
+/* 	.site_util li a.ico_site_util01.ico_disabled, */
+/* 	.site_util li a.ico_site_util02.ico_disabled{ */
+/* 		background: none; */
+/* 	} */
+}
+@media all and (min-width:461px) and (max-width:500px){
+
+	/* 풋터 */
+	footer .foot_info{
+		width:100%;
+		height:55px;
+		line-height: 53px;
+		box-sizing: border-box;
+		padding:0;
+	}
+	footer .foot_info li{
+		display:inline-block;
+		width:33.3%;
+		height:55px;
+		border-right:1px solid #616161;
+		box-sizing: border-box;
+		margin:0;
+		padding-left:0;
+		text-align: center;
+	}
+	footer .foot_info li:last-child{
+		width:33.4%;
+		border-right:0;
+	}
+	footer .foot_info li:before{
+		display: none;
+	}
+	footer .foot_info li.fl_right{
+		margin: 2px 10px;
+		height:44px;
+	}
+	footer .foot_info li.fl_right:after{
+		right:18px;
+		top:23px;
+	}
+	footer .foot_info li a{
+		display: inline-block;
+		text-align: center;
+		line-height: 53px;
+		padding-right:30px;
+		height:100%;
+		margin-top:0;
+	}
+	footer .foot_info li a:after{
+		top:15px;
+		right:15px;
+	}
+
+	footer address div{
+		float:inherit;
+		margin-bottom:20px;
+	}
+	footer address img{
+		float:inherit;
+	}
+}
+@media all and (max-width:460px){
+	/* 서브 컨텐츠 */
+	.company_topic {
+	    font-size: 24px;
+	}
+	.tit_explain {
+	    padding: 20px;
+	    margin: 0 auto;
+	    box-sizing: border-box;
+	    font-size:15px;
+	    line-height: 19px;
+	}
+
+	/* 풋터 */
+	footer .foot_info{
+		width:100%;
+		height:55px;
+		line-height: 53px;
+		box-sizing: border-box;
+		padding:0;
+		overflow:hidden;
+	}
+	footer .foot_info li{
+		display:inline-block;
+		width:33.3%;
+		height:55px;
+		border-right:1px solid #616161;
+		box-sizing: border-box;
+		margin:0;
+		padding-left:0;
+		text-align: center;
+	}
+	footer .foot_info li:last-child{
+		width:33.4%;
+		border-right:0;
+	}
+	footer .foot_info li:before{
+		display: none;
+	}
+	footer .foot_info li.fl_right{
+		margin: 2px 4.3%;
+		height:44px;
+		width:58%;
+	}
+	footer .foot_info li.fl_right:after{
+		right:18px;
+		top:23px;
+	}
+	footer .foot_info li.fl_right select{
+		width:100%;
+	}
+	footer .foot_info li a{
+		display: inline-block;
+		line-height: 56px;
+		text-align: center;
+		padding-right:0;
+		font-size:13px;
+		height:100%;
+		margin-top:0;
+	}
+	footer .foot_info li a:after{
+		display: none;
+	}
+	footer address div{
+		float:inherit;
+		margin-bottom:20px;
+	}
+	footer address img{
+		float:inherit;
+		width:38%;
+		margin: 0 5%;
+	}
+	/* 풋터 - 동영상보기 팝업 */
+	.pup_wrap.video {
+   		margin-left: -187px;
+	    margin-top: -134px;
+	    width: 375px;
+	    height: 228px;
+	}
+}
+@media all and (max-width:400px){
+	/* 풋터 - 동영상보기 팝업 */
+	.pup_wrap.video {
+   		margin-left: -167px;
+	    margin-top: -110px;
+	    width: 335px;
+	    height: 195px;
+	}
+	/* ---------- 회사소개 - 오시는 길 ---------- */	
+	.location_tab{
+		width:30%;
+		font-size:15px;
+	}
+	.location_tab_cont{
+		margin-bottom: 0;
+	}
+	.location_tit{
+		margin-bottom:10px;
+	}
+	.lo_tr .lo_th{
+		width:100%;
+		height:34px;
+		padding-left:20px;
+	}
+	.lo_tr .lo_th:before{
+		top:14px;
+	}
+	.lo_tr.transport {
+		width:100%;
+	}
+	.lo_tr.transport .lo_th{
+		border-top:1px solid #d8d6d9;
+		height:46px;
+		margin-top:10px;
+	}
+	.lo_tr.transport .lo_th:before{
+		display: none;
+	}
+	.lo_tr .lo_th:before{
+		left:10px;
+	}
+	.lo_tr .lo_td{
+		width:100%;
+		height:34px;
+		border-bottom:0;
+		padding:0;
+	}
+	.transport_box{
+		width:100%;
+		border-top:1px solid #d8d6d9;
+		border-bottom:0;
+		padding-bottom:0;
+	}
+	.transport_in{
+		width:100%;
+		min-height:inherit;
+	}
+	.transport_in.train {
+    	padding: 5px 20px ;
+	}
+	.transport_in.bus {
+    	padding: 0px 20px 20px;
+	}
+	.transport_in p{
+		font-size:14px;
+	}
+	.transport_in p span{
+		width:40px;
+		font-size:14px;
+	}
+	
+	/* 사이트맵
+	================================*/
+	.site_util li a {
+	    margin:0 5px;
+	    line-height:38px;
+		font-size:.9em; 
+	}
+	.site_part .business_ul {
+		padding:0 15px;
+	}
+	.site_part .business_ul ul {
+		padding:0 0 15px 0;
+	}
+	.site_part .business_ul li {
+	    margin-top:10px;
+	    width:100%;
+	}
+	
+	.site_util li a.ico_site_util01,
+	.site_util li a.ico_site_util02,
+	.site_util li a.ico_site_util03,
+	.site_util li a.ico_site_util04 {
+		background:transparent;
+		padding:0;
+		text-align:center;
+	}
+	.site_util li a.ico_site_util01.ico_disabled,
+	.site_util li a.ico_site_util02.ico_disabled{
+		background: none;
+	}
+}
+@media all and (max-width:350px){
+	/* 풋터 - 동영상보기 팝업 */
+	.pup_wrap.video {
+ 		margin-left: -138px;
+	    margin-top: -101px;
+	    width: 275px;
+	    height: 170px;
+	}
+	/* ---------- 회사소개 - C.I 소개 ---------- */
+	.btn_download_gp a {
+	    width: 49%;
+	    float: left;
+	    margin: 0;
+	    height: 40px;
+	    line-height: 39px;
+	}
+	.btn_download_gp a span{
+		display: none;
+	}
+	.btn_download_gp a.btn_jpg_download {
+	    float: right;
+	}
+	/* ---------- 회사소개 - 오시는 길 ---------- */
+	.transport_in p span.sign{
+		width:25%;
+	}
+	.transport_in p span.transport_txt{
+		width:100%;
+		margin-top:5px;
+		line-height:20px;
+	}
+}

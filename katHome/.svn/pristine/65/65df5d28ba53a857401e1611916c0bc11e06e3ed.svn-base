@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Update">
+	
+	<sql id="search">
+		where	status_kind = '10'
+		and		up_language = #{language}
+		and		master_seq = 2
+		<if test='!searchValue.equals("-")'>
+			and		up_title like concat('%',#{searchValue},'%')
+		</if>
+		
+		<if test='startDate != ""'>
+			<![CDATA[
+			and		date_format(modify_date, '%Y-%m-%d')	between	#{startDate} and #{endDate} 
+			]]>
+		</if>
+	</sql>
+	
+	<select id="updateCount" parameterType="CommPageDTO" resultType="int">
+		select	count(up_seq)
+		from	ad_update_info
+		<include refid="search"/>
+	</select>
+	
+	<select id="selectUpdate" parameterType="CommPageDTO" resultType="UpdateDTO">
+		
+		select	tNum
+				,upSeq
+				,upTitle
+				,upDownload
+				,upLanguage
+				,modifyUserId
+				,modifyDate
+				
+		from
+			(
+				select	@rn := @rn +1		as	tNum
+						,up_seq				as	upSeq
+						,up_title			as upTitle
+						,up_download		as upDownload
+						,up_language		as upLanguage
+						,modify_user_id		as	modifyUserId
+						,date_format(modify_date, '%Y-%m-%d')		as modifyDate
+				from	ad_update_info
+						,(select @rn := 0) R
+				<include refid="search"/>
+				order by up_seq desc
+			)main
+		where	tNum between ${startRow} and ${endRow}
+	</select>
+	
+	<select id="updateDetail" parameterType="UpdateDTO" resultType="UpdateDTO">
+		select	up_seq				as	upSeq
+				,up_title			as	upTitle
+				,CONVERT(CONVERT(up_contents USING BINARY) USING utf8)	as	upContents
+				,up_download		as	upDownload
+				,up_language		as	upLanguage
+				,up_org_file_name	as	upOrgFileName
+				,up_file_name		as	upFileName
+				,date_format(create_date, '%Y-%m-%d')		as	createDate
+		from	ad_update_info
+		where	up_seq = ${upSeq}
+		and		status_kind = '10'
+		and		master_seq = 2
+	</select>
+	
+	<insert id="updateInsert" parameterType="UpdateDTO">
+		<selectKey keyProperty="upSeq" resultType="int" order="BEFORE">
+			select ifnull(max(up_seq), 0) + 1	as upSeq from ad_update_info
+		</selectKey>
+		insert into ad_update_info
+			(
+				master_seq
+				,up_seq
+				,up_title
+				,up_download
+				,up_language
+				,up_contents
+				,up_org_file_name
+				,up_file_name
+				,up_hit
+				,create_user_id
+				,create_date
+				,modify_user_id
+				,modify_date
+				,status_kind
+			)
+			value
+			(
+				2
+				,${upSeq}
+				,#{upTitle}
+				,#{upDownload}
+				,#{upLanguage}
+				,#{upContents}
+				,#{upOrgFileName}
+				,#{upFileName}
+				,#{upHit}
+				,#{createUserId}
+				,date_format(now(), '%Y-%m-%d')
+				,#{createUserId}
+				,date_format(now(), '%Y-%m-%d')
+				,'10'
+			)
+	</insert>
+	
+	<update id="downloadReset" parameterType="String">
+		update	ad_update_info
+		set		up_download = 'N'
+		where	up_language = #{adLanguage}
+		and		master_seq = 2		
+	</update>
+	
+	<update id="downloadChk" parameterType="UpdateDTO">
+		update	ad_update_info
+		set		up_download = #{upDownload}
+		where	up_seq = ${upSeq}
+		and		master_seq = 2
+	</update>
+	
+	<update id="updateModify" parameterType="UpdateDTO">
+		update	ad_update_info
+		set		up_title			=	#{upTitle}
+				,up_contents		=	#{upContents}
+				,up_download		=	#{upDownload}	
+				,up_language		=	#{upLanguage}
+				<if test="upOrgFileName != ''">
+					,up_org_file_name	=	#{upOrgFileName}
+					,up_file_name		=	#{upFileName}
+				</if>
+				,modify_user_id		=	#{createUserId}
+				,modify_date		=	date_format(now(), '%Y-%m-%d')
+				
+		where	up_seq = ${upSeq}
+		and		master_seq = 2
+	</update>
+	
+	<update id="updateDel" parameterType="UpdateDTO">
+		update	ad_update_info
+		set		status_kind = '40'
+		where	up_seq = ${upSeq}
+		and		master_seq = 2
+	</update>
+	
+	<select id="updateFileName" parameterType="UpdateDTO" resultType="String">
+		select	up_file_name
+		from	ad_update_info	
+		where	up_seq = ${upSeq}
+		and		master_seq = 2
+	</select>
+	
+	<select id="getFileInfo" parameterType="UpdateDTO" resultType="UpdateDTO">
+		select	up_org_file_name	as	upOrgFileName
+				,up_file_name		as	upFileName
+		from	ad_update_info
+		where	up_language = #{upLanguage}
+		and		up_download = 'Y'
+		and		master_seq = 2
+	</select>
+	
+			
+</mapper>

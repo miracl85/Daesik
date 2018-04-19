@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+  "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="default" template="/WEB-INF/views/tiles/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/header/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/footer/footer.jsp" />
+	</definition>
+	
+	<definition name="main_default" template="/WEB-INF/views/tiles/main_layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/header/header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/cont/main.jsp" />
+	</definition>
+	
+	<definition name="katIntroduce" extends="default">
+		<put-attribute name="body" value="/WEB-INF/views/cont/introduce.jsp" />
+	</definition>
+	
+	<definition name="katCivilian" extends="default">
+		<put-attribute name="body" value="/WEB-INF/views/cont/civilian.jsp" />
+	</definition>
+	
+	<definition name="katDiffusion" extends="default">
+		<put-attribute name="body" value="/WEB-INF/views/cont/diffusion.jsp" />
+	</definition>
+	
+	<definition name="katCmnt" extends="default">
+		<put-attribute name="body" value="/WEB-INF/views/cont/notice.jsp" />
+	</definition>
+
+	
+	<!-- Admin -->
+	<definition name="admin_base" template="/WEB-INF/views/tiles/admin_layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value=""/>	
+		<put-attribute name="body" value=""/>		
+		<put-attribute name="footer" value=""/>		
+	</definition>
+	
+	<definition name="admin.notice" extends="admin_base">
+		<put-attribute name="title" value="SoltWorks" />
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/notice/notice.jsp"/>			
+	</definition>
+	
+	<definition name="admin.notice.detail" extends="admin_base">
+		<put-attribute name="title" value="SoltWorks" />
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/notice/notice_write.jsp"/>			
+	</definition>
+	
+	<definition name="admin.affiliate" extends="admin_base">
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/affiliate/affiliate.jsp"/>			
+	</definition>
+	
+	<definition name="admin.history" extends="admin_base">
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/history/history.jsp"/>			
+	</definition>
+	
+	<definition name="admin.update" extends="admin_base">
+	<put-attribute name="title" value="SoltWorks" />
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/update/update.jsp"/>			
+	</definition>
+	
+	<definition name="admin.noticeView" extends="admin_base">
+	<put-attribute name="title" value="SoltWorks" />
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/board_write.jsp"/>			
+	</definition>
+		
+	<definition name="admin.os" extends="admin_base">
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/statistics/statistics_os.jsp"/>			
+	</definition>
+	
+	<definition name="admin.country" extends="admin_base">
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/statistics/statistics_country.jsp"/>			
+	</definition>
+	
+	<definition name="admin.device" extends="admin_base">
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/statistics/statistics_device.jsp"/>			
+	</definition>
+	
+	<definition name="admin.mobile" extends="admin_base">
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/statistics/statistics_mobile.jsp"/>			
+	</definition>
+	
+	<definition name="admin.page" extends="admin_base">
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/statistics/statistics_page.jsp"/>			
+	</definition>
+	
+	<definition name="admin.dash" extends="admin_base">
+		<put-attribute name="header" value="/WEB-INF/views/header/admin_header.jsp"/>		
+		<put-attribute name="body" value="/WEB-INF/views/admin/statistics/statistics.jsp"/>			
+	</definition>
+	
+</tiles-definitions>

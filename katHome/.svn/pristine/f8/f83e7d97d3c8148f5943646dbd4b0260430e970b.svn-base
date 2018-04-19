@@ -1,0 +1,167 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
+<spring:eval expression="@config['URL_FRONT_CSS']" var="cssUrl" />
+<spring:eval expression="@config['URL_FRONT_JS']" var="jsUrl" />
+<spring:eval expression="@config['URL_FRONT_IMG']" var="imgUrl" />
+
+<header>
+	<input type="hidden" id="hidden_sub_menu" value="${subMenu}">
+	<h1><a href="/" id="top_logo" title="KAT"><img src="${imgUrl}comm/logo.png" alt="logo"></a></h1>
+	<nav class="gnb">
+		<ul>
+			<li>
+				<div class="nav_dep2 nav_illust_box">
+					<p>사람을 위한 <strong>기술가치의 실현</strong></p>
+				</div>
+			</li>
+			<li>
+				<a href="/katIntroduce" id="intro_top" class="top_menu" title="회사소개">회사소개</a>
+				<div class="nav_dep2">
+					<ul>
+						<li id="sub_intro" class="sub_menu active">
+							<a href="/katIntroduce" title="기업개요">기업개요</a>
+						</li>
+						<li id="sub_his" class="sub_menu">
+							<a href="/katIntroduce?subMenu=his" title="주요연혁">주요연혁</a>
+						</li>
+						<li id="sub_ci" class="sub_menu">
+							<a href="/katIntroduce?subMenu=ci" title="C.I 소개">C.I 소개</a>
+						</li>
+						<li id="sub_sub" class="sub_menu">
+							<a href="/katIntroduce?subMenu=sub" title="계열사">계열사</a>
+						</li>
+						<li id="sub_guest" class="sub_menu">
+							<a href="/katIntroduce?subMenu=guest" title="주요 고객사">주요 고객사</a>
+						</li>
+						<li id="sub_way" class="sub_menu">
+							<a href="/katIntroduce?subMenu=way" title="오시는 길">오시는 길</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="/katDiffusion" id="diff_top" class="top_menu" title="사업영역">사업영역</a>
+				<div class="nav_dep2 solution">
+					<ul>
+						<li id="" class="solution01">
+							<a href="/katDiffusion" title="방산사업">방산사업</a>
+							<ul>
+								<li id="sub_kebinet" class="sub_menu">
+									<a href="/katDiffusion?subMenu=kebinet" title="케비닛">-케비닛</a>
+								</li>
+								<li id="sub_consol" class="sub_menu">
+									<a href="/katDiffusion?subMenu=consol" title="콘솔">-콘솔</a>
+								</li>
+							</ul>
+						</li>
+						<li class="solution02">
+							<a href="/katCivilian" title="민수사업">민수사업</a>
+							<ul>
+								<li id="sub_smt" class="sub_menu">
+									<a href="/katCivilian?subMenu=smt" title="칩마운터">-칩마운터</a>
+								</li>
+								<li id="sub_robot" class="sub_menu">
+									<a href="/katCivilian?subMenu=robot" title="협동로봇">-협동로봇</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li>
+				<a href="/katCmnt" id="cmnt_top" class="top_menu" title="커뮤니티">커뮤니티</a>
+				<div class="nav_dep2 community">
+					<ul>
+						<li>
+							<a href="/katCmnt" title="공지사항">공지사항</a>
+							<ul>
+								<li id="sub_cmnt" class="sub_menu">
+									<a href="/katCmnt" title="공지사항">-공지사항</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="nav_bg"></div>
+	</nav>
+	<div class="util">
+<!-- 		<span class="language"> -->
+<!-- 			<a href="javascript:;" class="active" title="KOR">KOR</a> -->
+<!-- 			<a href="javascript:;" title="ENG">ENG</a> -->
+<!-- 		</span> -->
+		<a href="http://gw.soltworks.com" class="btn_groupware" target="_blank" title="GroupWare">GroupWare</a>
+		<a href="javascript:;" class="btn_sitemap" onclick="siteMap();" title="사이트맵">
+			<span></span>
+			<span></span>
+			<span></span>
+		</a>
+	</div>
+</header>
+
+<section class="site_map" id="pup_site_map" style="display: none;">
+	<div class="site_map_body">
+		<div class="site_part">
+			<div class="site_topic company">
+				<p title="Company Intriduction">Company Intriduction</p>
+				<strong title="회사소개">회사소개</strong>
+			</div>
+			<ul>
+				<li><a href="/katIntroduce" title="기업소개">- 기업소개</a></li>
+				<li><a href="/katIntroduce?subMenu=his" title="주요연혁">- 주요연혁</a></li>
+				<li><a href="/katIntroduce?subMenu=ci" title="C.I소개">- C.I소개</a></li>
+				<li><a href="/katIntroduce?subMenu=sub" title="계열사">- 계열사</a></li>
+				<li><a href="/katIntroduce?subMenu=guest" title="주요 고객사">- 주요 고객사</a></li>
+				<li><a href="/katIntroduce?subMenu=way" title="오시는 길">- 오시는 길</a></li>
+			</ul>
+		</div>
+		<div class="site_part">
+			<div class="site_topic business">
+				<p title="field of business">field of business</p>
+				<strong title="사업영역">사업영역</strong>
+			</div>
+			<div class="business_ul business_left">
+				<strong title="방산사업">방산사업</strong>
+				<ul>
+					<li><a href="/katDiffusion?subMenu=kebinet" title="캐비닛">- 캐비닛</a></li>
+					<li><a href="/katDiffusion?subMenu=consol" title="콘솔">- 콘솔</a></li>
+				</ul>
+			</div>
+			<div class="business_ul business_right">
+				<strong title="민수사업">민수사업</strong>
+				<ul>
+					<li><a href="/katCivilian?subMenu=smt" title="칩마운터">- 칩마운터</a></li>
+					<li><a href="/katCivilian?subMenu=robot" title="협동로봇">- 협동로봇</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="site_part last">
+			<div class="site_topic community">
+				<p title="community">community</p>
+				<strong title="커뮤니티">커뮤니티</strong>
+			</div>
+			<ul>
+				<li><a href="/katCmnt" title="공지사항">- 공지사항</a></li>
+			</ul>
+		</div>
+		<ul class="site_util">
+			<li>
+				<a href="javascript:;" class="ico_site_util01 ico_disabled" onclick="readyAlert();" title="회사소개 자료">회사소개 자료</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="ico_site_util02 ico_disabled" onclick="readyAlert();" title="회사홍보 동영상">회사홍보 동영상</a>
+			</li>
+			<li class="mobile_ck">
+				<a href="http://gw.soltworks.com/" class="ico_site_util03" target="_blank" title="GROUPWARE">GROUPWARE</a>
+			</li>
+			<li class="admin_li mobile_ck">
+				<a href="/admin/login" class="ico_site_util04" target="_blank" title="관리자 페이지">관리자 페이지	</a>
+			</li>
+		</ul>
+		<a href="javascript:;" class="btn_site_close" onclick="siteMap();" title="닫기">닫기</a>	
+	</div>
+</section>

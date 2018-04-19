@@ -1,0 +1,796 @@
+@charset "utf-8";
+
+/* ------------------------ 메인 ------------------------ */
+/* 메인 height, width 반응형 */
+@media all and (max-height:850px),(max-width:1280px) {
+	/* section01 */
+	.visual_txt strong{
+		font-size:1.1em;
+		padding-bottom:3px;
+		margin-bottom:15px;
+		border-bottom: 2px solid #fff;
+	}
+	.visual_txt h2{
+		font-size:3.4em;
+	}
+	.visual_txt p{
+		padding-top:25px;
+		font-size:1.1em;
+		line-height:1.3em;
+	}
+	/* section02 */
+	.visual_txt2{
+		/* padding-top:5%; */
+	}
+	.visual_txt2 h2{
+		font-size:3.4em;
+	}
+	.visual_txt2 p{
+		padding-top:10px;
+		font-size:1.1em;
+		line-height:1.3em;
+	}
+	.about_kat{
+		width:950px;
+		height:460px;
+	}
+	.soltworks_gp{
+	    width: 110px;
+  		height: 110px;
+		margin-top:340px;
+		font-size:14px;
+		line-height:16px;
+		background-position:center 4px;
+		padding-top:61px;
+	}
+	@keyframes soltworks_sign{
+		0%{
+			margin:0 auto;
+			opacity:0;
+		}
+		100%{
+			opacity:1;
+			margin-top:340px;
+		}
+	}
+	.kat_box{
+		width:300px;
+		height:300px;
+	}
+	.kat_box.friend{
+		margin-left:-150px;
+	}
+	.kat_box .box_thumb:after{
+		background-position:center 71%;
+		background-size:70px;	
+	}
+	.kat_box.family .box_thumb:after{
+		background-position:center 75%;
+		background-size:70px;
+	}
+	.kat_box.fame .box_thumb:after{
+		background-position:center 71%;
+		background-size:70px;
+	}
+	.lin_inner,
+	.lin_inner_02{
+		width:270px;
+		height:270px;
+	}
+	.lin_inner_02{
+		left:-135px;
+	}
+	/* section03 */
+	.visual_txt3 strong{
+		font-size:1.1em;
+		padding-bottom:3px;
+		margin-bottom:8px;
+		border-bottom: 2px solid #000;
+	}
+	.visual_txt3 h2{
+		font-size:3.4em;
+	}
+	.visual_txt3 p{
+		padding-top:5px;
+		font-size:1.1em;
+		line-height:1.3em;
+	}
+	.main_video_gp{
+		margin-top:25px;
+		height:410px;
+	}
+	.main_video.mv01{
+		height:410px;
+	}
+	.video_right{
+		height:410px;
+	}
+	.main_video.mv02, 
+	.main_video.mv03, 
+	.main_video.mv04{
+		height:205px;
+	}
+	.video_txt{
+		top:20px;
+	}
+	.video_txt strong{
+		font-size:28px;
+	}
+	.btn_trans_arrow{
+		font-size:15px;
+		background-position: -4px 7px;
+		height: 28px;
+	}
+	.video_tag{
+		font-size:15px;
+		padding:0 10px 2px;
+	}
+	.video_tag span{
+		margin-right:5px;
+	}
+	.main_video.mv02 video{
+		margin-top:0;
+	}
+}
+
+@media all and (max-height:750px),(max-width:1025px) {
+	.scroll_simbol{
+		display: none;
+	}
+	.slide01 .flex-control-nav,
+	.slide01 .flex-pauseplay{
+		display:none;
+	}
+	/* section01 */ 
+	.visual_txt {
+		width:90%;
+		margin:0 auto;
+		padding-bottom:115px;
+	}
+	.visual_txt strong{
+		font-size:1.1em;
+		padding-bottom:3px;
+		margin-bottom:15px;
+		border-bottom: 2px solid #fff;
+	}
+	.visual_txt p{
+		height:40px;
+		margin-bottom:30px;
+	}
+	.visual_txt p span{
+		display:block;
+	}
+	/* section02 */
+	#section2 .section_middle_box{
+		padding-bottom:0;
+	}
+	.visual_txt2{
+		/* padding-top:9%; */
+	}
+	.visual_txt2 p span{
+		display:block;
+	}
+	.about_kat{
+		width:760px;
+		height:370px;
+	}
+	.about_kat:after{
+		background: url(../img/main/bg_kat_box_lin02.png) no-repeat center 35px;
+	}
+	.soltworks_gp{   
+		width: 100px;
+	    height: 100px;
+	    margin-top: 15px;
+	    font-size: 14px;
+	    line-height: 16px;
+	    background-position: center 5px;
+	    padding-top: 52px;
+	    position: absolute;
+	    left: 50%;
+	    margin-left: -50px;
+	    z-index: 2;
+	    background-size: 48px;
+	}
+	@keyframes soltworks_sign{
+		0%{
+			margin:0 0 0 -50px;
+			opacity:0;
+		}
+		100%{
+			opacity:1;
+			margin-top:15px;
+		}
+	}
+	.kat_box{
+		width:240px;
+		height:240px;
+	}
+	.kat_box.family{
+		top:130px;
+	}
+	.kat_box.friend{
+		top:130px;
+		margin-left:-120px;
+	}
+	.kat_box.fame{
+		top:130px;
+		margin-left:-120px;
+	}
+	.kat_box .box_thumb:after{
+		background-position:center 62%;
+		background-size:70px;	
+	}
+	.kat_box.family .box_thumb:after{
+		background-position:center 62%;
+		background-size:70px;
+	}
+	.kat_box.fame .box_thumb:after{
+		background-position:center 61%;
+		background-size:70px;
+	}
+	.kat_box .kat_tit{
+		font-size:24px;
+	}
+	.kat_box .kat_tit span{
+		font-size: 14px;
+	    padding: 0 0 2px;
+	    height: 20px;
+	    width: 80px;
+	    line-height: 23px;
+	}
+	.kat_box:hover .kat_txt{
+		display: none;
+	}
+	.lin_inner,
+	.lin_inner_02{
+		width:210px;
+		height:210px;
+	}
+	.lin_inner_02{
+		left:-105px;
+	}
+	/* section03 */
+	.visual_txt3 p span{
+		display:block;
+	}
+	.btn_trans_arrow {
+	    background-position: -28px 10px;
+	    background-size: 110px;
+	}
+	.btn_trans_arrow span{
+		display: none;
+	}
+	.video_tag{
+		display: none;
+	}
+	.main_video .btn_more{
+		display: block;
+	}
+	.main_video.mv02 video{
+		width:135%;
+	}
+}
+
+@media all and (max-height:670px), (max-width:760px) {
+	.right{
+		display: none;
+	}
+	/* section01 */ 
+	.visual_txt {
+		width:90%;
+	}
+	.visual_txt h2 {
+		line-height:65px;
+	}
+	.visual_txt h2 span{
+		display: block;
+	}
+	.visual_txt p{
+		height:40px;
+	}
+	.btn_view{
+		height:2.5em;
+		padding:0 50px 0 30px;
+		line-height:2.3em;
+		background-position: 88% center;
+	}
+	/* section02 */
+	.visual_txt2{
+		padding-bottom:50px;
+	}
+	.about_kat{
+		width:700px;
+		height:200px;
+	}
+	.about_kat:after{
+		background: url(../img/main/bg_kat_box_lin03.png) no-repeat center;
+	}
+	.soltworks_gp {
+	    width: 200px;
+	    height: 40px;
+	    margin-top: 15px;
+	    font-size: 14px;
+	    line-height: 38px;
+	    background-position: 12px 2px;
+	    padding: 0 0 0 30px;
+	    position: absolute;
+	    left: 50%;
+	    margin-left: -100px;
+	    z-index: 2;
+	    background-size: 34px;
+	}
+	@keyframes soltworks_sign{
+		0%{
+			margin:0 0 0 -100px;.
+			opacity:0;
+		}
+		100%{
+			opacity:1;
+			margin-top:15px;
+		}
+	}
+	.kat_box{
+		width:200px;
+		height:200px;
+	}
+	.kat_box.family{
+		top:0px;
+	}
+	.kat_box.friend{
+		top:0px;
+		margin-left:-100px;
+	}
+	.kat_box.fame{
+		top:0px;
+	}
+	.kat_box .box_thumb:after{
+		background-position:center 62%;
+		background-size:70px;	
+	}
+	.kat_box.family .box_thumb:after{
+		background-position:center 62%;
+		background-size:70px;
+	}
+	.kat_box.fame .box_thumb:after{
+		background-position:center 61%;
+		background-size:70px;
+	}
+	.kat_box .kat_tit{
+		top:20px;
+		font-size:22px;
+	}
+	.kat_box .kat_tit span{
+		font-size: 14px;
+	    padding: 0 0 2px;
+	    height: 20px;
+	    width: 80px;
+	    line-height: 23px;
+	}
+	.kat_box:hover .kat_txt{
+		display: none;
+	}
+	.lin_inner,
+	.lin_inner_02{
+		width:178px;
+		height:178px;
+		top:6px;
+		left:6px;
+		bottom:6px;
+	}
+	.lin_inner_02{
+		left:-89px;
+	}
+	.kat_box .btn_more{
+		width:36px;
+		height: 36px;
+		margin-left:-18px;
+	}
+	/* section03 */
+	.main_video_gp{
+		height:356px;
+	}
+	.main_video.mv01{
+		width:50%;
+		height:50%;
+	}
+	.video_right{
+		width:100%;
+		margin-top:-178px;
+	}
+	.main_video.mv02{
+		width:50%;
+		height:178px;
+		margin-left:50%;
+	}
+	.main_video.mv03,
+	.main_video.mv04{
+		height:178px;
+	}
+	.main_video .btn_more {
+	    width: 36px;
+	    height: 36px;
+	}
+
+}
+@media all and (max-height:650px), (max-width:690px) {
+	/* section01 */ 
+	.visual_txt {
+		width:90%;
+	}
+	.visual_txt strong {
+		font-size:0.9em;
+		font-weight:normal;
+		border-bottom:1px solid #fff;
+	}
+	.visual_txt h2 {
+		line-height:50px;
+		font-size:2.6em;
+	}
+	.visual_txt h2 span{
+		display: block;
+	}
+	.visual_txt p{
+		height:40px;
+		font-size:1em;
+		margin-bottom:40px;
+	}
+	.btn_view{
+	    height: 2.3em;
+	    padding: 0 50px 0 30px;
+	    line-height: 2.2em;
+	    background-position: 88% center;
+	}
+	/* section02 */
+	.visual_txt2{
+		/* padding-top:18%; */
+	}
+	.about_kat{
+		width:480px;
+		height:150px;
+		margin-top:20px;
+	}
+	.about_kat:after{
+		background: url(../img/main/bg_kat_box_lin03.png) no-repeat center;
+	}
+	.visual_txt2 h2{
+		font-size:2.6em;
+	}
+	.visual_txt2 p{
+		font-size:1em;
+		width:90%;
+		margin:0 auto 20px;
+	}
+	.kat_box{
+		width:150px;
+		height:150px;
+	}
+	.kat_box.friend{
+		margin-left:-75px;
+	}
+	.kat_box .box_thumb:after{
+		background-position:center 57%;
+		background-size:50px;	
+	}
+	.kat_box.family .box_thumb:after{
+		background-position:center 57%;
+		background-size:50px;
+	}
+	.kat_box.fame .box_thumb:after{
+		background-position:center 57%;
+		background-size:50px;
+	}
+	.kat_box .kat_tit{
+		top:20px;
+		font-size:18px;
+	}
+	.kat_box .kat_tit span{
+		display:none;
+	}
+	.lin_inner,
+	.lin_inner_02{
+		top:6px;
+		left:6px;
+		width:128px;
+		height:128px;
+	}
+	.lin_inner_02{
+		left:-64px;
+	}
+	/* section03 */
+	.visual_txt3 strong{
+		font-size: 0.9em;
+	    padding-bottom: 1px;
+	    margin-bottom: 6px;
+	    border-bottom: 1px solid #000;
+	}
+	.visual_txt3 h2{
+		font-size:2.6em;
+	}
+	.visual_txt3 p{
+		font-size:1em;
+		width:90%;
+		margin:0 auto;
+	}
+	.main_video_gp{
+		height:320px;
+	}
+	.video_right{
+		margin-top:-160px;
+	}
+	.main_video.mv02{
+		height:160px;
+	}
+	.main_video.mv03,
+	.main_video.mv04{
+		height:160px;
+	}
+	.video_txt strong{
+		font-size:24px;
+	}
+	.btn_trans_arrow{
+		font-size:13px;
+		background-position: -24px 9px;
+    	background-size: 96px;
+	}
+}
+
+@media all and (max-height:600px), (max-width:500px) {
+	/* section01 */ 
+	.visual_txt {
+		width:80%;
+		word-break: keep-all;
+		padding-bottom:70px;
+	}
+	.visual_txt strong {
+		font-size:0.9em;
+		font-weight:normal;
+		border-bottom:1px solid #fff;
+		margin-bottom:24px;
+	}
+	.visual_txt h2 {
+		line-height:45px;
+		font-size:2.2em;
+		letter-spacing:0;
+	}
+	.visual_txt h2 span{
+		display:block;
+	}
+	.visual_txt p{
+		width:90%;
+		height:40px;
+		font-size:1em;
+		padding-top:15px;
+		margin:0 auto 50px;
+	}
+	.visual_txt p span{
+		display:inline;
+	}
+	.btn_view{
+	    height: 2.3em;
+	    padding: 0 50px 0 30px;
+	    line-height: 2.2em;
+	    background-position: 84% center;
+	    font-size:15px;
+	    background-size:25px;
+	}
+	/* section02 */
+	.visual_txt2{
+		/* padding-top:14%; */
+		width:80%;
+		margin:0 auto;
+		padding-bottom:0;
+	}
+	.visual_txt2 p span{
+		display:inline;
+	}
+	.soltworks_gp{
+		margin-top:0;
+	}
+	@keyframes soltworks_sign{
+		0%{
+			margin:0 0 0 -100px;
+			opacity:0;
+		}
+		100%{
+			opacity:1;
+			margin-top:0px;
+		}
+	}
+	.visual_txt2 h2{
+		font-size:2em;
+	}
+	.visual_txt2 p{
+		font-size:1em;
+	}
+	.about_kat{
+		width:80%;
+		height:270px;
+		margin-top:13px;
+	}
+	.soltworks_gp{
+	    position: static;
+	    width: 180px;
+	    height: 38px;
+	    line-height: 38px;
+	    background-position: 12px 3px;
+	    background-size: 30px;
+	    margin: 0 auto 12px;
+	    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	    font-size: 13px;
+	    padding-left: 25px;
+	}
+	@keyframes soltworks_sign{
+		0%{
+			margin:0 auto;
+			opacity:0;
+		}
+		100%{
+			opacity:1;
+			margin-top:0px;
+		}
+	}
+	.kat_box{
+		position: relative;
+		display: inline-block;
+		margin:0px 0px 2% !important;
+		width:100%;
+		height: 30%;
+		border-radius:0;
+		border:3px solid #fff;
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	}
+	.kat_box.friend{
+		top:inherit;
+		left:inherit;
+	}
+	.kat_box.family{
+		top:inherit;
+		left:inherit;
+	}
+	.kat_box.fame{
+		top:inherit;
+		right:inherit;
+		margin-bottom:0;
+	}
+	#section1.active .kat_box.friend{
+		animation: friend_view 2s 1;
+	}
+	#section1.active .kat_box.family{
+		animation: friend_view 1s 1;
+	}
+	#section1.active .kat_box.fame{
+		animation: friend_view 3s 1;
+	}
+
+	.kat_box .box_thumb:after,
+	.kat_box.family .box_thumb:after,
+	.kat_box.fame .box_thumb:after{
+		background-position:200px 200px;
+	}
+	.kat_box.family .box_thumb img{
+		margin-top:-265px;
+	}
+	.kat_box.friend .box_thumb img{
+		margin-top:-125px;
+	}
+	.kat_box.fame .box_thumb img{
+		margin-top:-100px;
+	}
+	.kat_box .kat_tit{
+		top:26px;
+		font-size:16px;
+		font-weight:600;
+		text-shadow:0px 1px 10px rgba(0,0,0,1);
+	}
+	.kat_box:hover .kat_tit{
+		text-shadow:inherit;
+	}
+	.kat_box .kat_tit span{
+		display:none;
+	}
+	.kat_box:hover .lin_inner,
+	.kat_box:hover .lin_inner_02{
+		display:none;
+	}
+	.kat_box:hover .kat_lin_gp_full{
+		display: block;
+	}
+	.kat_box .btn_more{
+	    right: 0;
+	    left: inherit;
+	    border-radius: initial;
+	    bottom: 0px;
+	}
+	/* section03 */
+	.visual_txt3{
+		padding:0% 5% 0;
+		width:90%;
+		margin:0 auto;
+	}
+	.visual_txt3 strong{
+		font-size: 0.9em;
+	    padding-bottom: 1px;
+	    margin-bottom: 15px;
+	}
+	.visual_txt3 h2{
+		font-size:2em;
+	}
+	.visual_txt3 p{
+		font-size:1em;
+		width:100%;
+	}
+	.visual_txt3 p span{
+		display:inline;
+	}
+	.main_video_gp{
+		height:288px;
+		margin-top:20px;
+	}
+	.video_right{
+		margin-top:-144px;
+	}
+	.main_video.mv02{
+		height:144px;
+	}
+	.main_video.mv03,
+	.main_video.mv04{
+		height:144px;
+	}
+	.main_video.mv01 video,
+	.main_video.mv02 video,
+	.main_video.mv03 video,
+	.main_video.mv04 video{
+		width:auto;
+		height:100%;
+		margin-top:0;
+	}
+	.main_video video{
+		width:100%;
+		height:auto;
+	}
+	.video_txt strong{
+		font-size:20px;
+	}
+	.btn_trans_arrow{
+		font-size:13px;
+		background-position: -24px 9px;
+    	background-size: 96px;
+	}
+}
+@media all and (max-height:570px), (max-width:360px) {
+	/* section02 */
+	#section1:after{
+		content:"";
+		display: block;
+		width:100%;
+		height:100%;
+		position: absolute;
+		top:0;
+		left:0;
+		right: 0;
+		bottom: 0;
+		z-index:1;
+		background-color:rgba(0,0,0,0.1);
+	}
+	.visual_txt2{
+		/* padding:20% 5% 0; */
+		color:#fff;
+		width:90%;
+	}
+	.visual_txt2 h2{
+		text-shadow: 0px 1px 1px rgba(0,0,0,0.6);
+	}
+	.visual_txt2 p{
+		text-shadow: 0px 1px 1px rgba(0,0,0,0.7);
+	}
+
+	.kat_box.family .box_thumb img{
+		margin-top:-173px;
+	}
+	.kat_box.friend .box_thumb img{
+		margin-top:-97px;
+	}
+	.kat_box.fame .box_thumb img{
+		margin-top:-117px;
+	}
+}

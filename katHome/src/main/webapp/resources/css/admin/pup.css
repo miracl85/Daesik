@@ -1,0 +1,137 @@
+@charset "utf-8" 
+@import url('reset.css');
+
+.pup_bg{
+	position: fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background-color:rgba(0,0,0,0.3);
+	z-index:10;
+	display: none;
+}
+
+/* 주요고객사 팝업창 */
+.pup_wrap{
+	display: none;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-left:-400px;
+	margin-top:-300px;
+	width:800px;
+/* 	height:450px; */
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	background-color:#fff;
+	z-index:20;
+}
+.pup_wrap .pup_tit{
+	display: block;
+	width:100%;
+	height:50px;
+	line-height:48px;
+	background: url(../../img/pup/bg_etri_pup_tit.png) repeat-x 0 0;
+	color:#fff;
+	text-align: center;
+	font-size:18px;
+	font-weight: 600;
+}
+.pup_wrap .pup_body{
+	width:100%;
+/* 	height:400px; */
+}
+.pup_cont{
+	padding:35px;
+	width:100%;
+	box-sizing: border-box;
+}
+.pup_bottom {
+	padding:15px;
+	text-align:center;
+	background-color:#f3f6f9;
+	overflow:hidden;
+}
+.pup_bottom a {
+	display:inline-block;
+	margin:0 3px;
+	padding:8px 30px;
+	color:#fff;
+	border-radius:2px;
+	font-weight:600;
+	text-shadow:0 0 5px rgba(0, 0, 0, 0.3);
+}
+.pup_bottom a.btn_save {
+	background-color:#ecac21;
+}
+.pup_bottom a.btn_deletes {
+	background-color:#585858;
+}
+.pup_bottom a.btn_cancel {
+	background-color:#a0aab0;
+}
+.btn_pup_close{
+	position:absolute;
+	right:0;
+	top:0;
+	display: block;
+	width:50px;
+	height:50px;
+	background: #d55b0a url(../../img/pup/ico_close.png) no-repeat center;
+	background-size: 55px;
+	font-size: 0;
+	z-index:11;
+}
+
+.site_example{
+	text-align:left;
+/* 	margin-top:5px; */
+	color:#28b34e;
+	font-size:12px;
+}
+.site_txt{
+	width:100%;
+	box-sizing:border-box;
+	border:1px solid #cecece;
+}
+
+/* file delete btn */
+.file_name {
+	padding-top:3px;
+	text-align:left;
+	font-weight:600;
+}
+.file_name > * {
+	vertical-align:middle;
+}
+.btn_file_delete {
+	margin-left:3px;
+	display:inline-block;
+	width:12px;
+	height:12px;
+	font-size:0;
+	text-indent:-9999999px;
+	background:url(../../img/admin/pup/btn_file_delete.gif) no-repeat 0 0;
+}
+.file_no_img {
+	float:left;
+	overflow:hidden;
+	width:130px;
+	height:50px;
+	border:1px solid #ddd;
+	background-color:#ddd;
+}
+.file_no_img img {
+	width:100%;
+	height:100%;
+}
+.file_insert {
+	padding-left:145px;
+}
+.file_insert.file_insert_padd {
+	padding-left:0;
+}
+
+
+
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+	
+	<bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource"> 
+		<property name="basenames"> 
+			<list>
+				<value>classpath:messages/message</value> 
+			</list> 
+		</property> 
+		<property name="defaultEncoding" value="UTF-8" /> 
+		<property name="cacheSeconds" value="60" /> 
+	</bean> 
+
+	<!-- using cookie -->
+	<bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="cookieMaxAge" value="-1"/>
+	</bean>
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<context:property-placeholder location="classpath:db.properties" />
+	<util:properties id="config" location="classpath:url.properties" />
+	
+	<!-- DB Connection -->
+	<bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">
+		<constructor-arg ref="dataSourceSpied" />
+		<property name="logFormatter">
+			<bean class="net.sf.log4jdbc.tools.Log4JdbcCustomFormatter">
+				<property name="loggingType" value="MULTI_LINE" />
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="dataSourceSpied" class="org.apache.ibatis.datasource.pooled.PooledDataSource">
+		<property name="driver"							value="${jdbc.driverClassName}" />
+		<property name="url"							value="${jdbc.url}" />
+		<property name="username"						value="${jdbc.username}" />
+		<property name="password"						value="${jdbc.password}" />
+	</bean>
+	
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="typeAliasesPackage" value="com.kat.home" />
+		<property name="mapperLocations" value="classpath*:sql_map/*.xml" />
+	</bean>
+	
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+	
+	<bean id="securityDao" class="com.kat.home.security.SecurityDao">
+		<property name="sqlSessionFactory" ref="sqlSessionFactory" />
+	</bean>
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+	
+</beans>

@@ -1,0 +1,138 @@
+@charset "utf-8";
+@import url('reset.css');
+
+
+body {
+	background-color:#f8f6f9;
+}
+.login_body {
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-300px;
+	margin-left:-515px;
+	padding-left:588px;
+	height:588px;
+	width:425px;
+	background:#fff url(../../img/admin/login/img_visual.png) no-repeat 0 0;
+	box-shadow:0 0 5px rgba(0, 0, 0, 0.5);
+}
+.login_body h1 {
+	display:block;
+	padding:50px 0 0;
+	text-align:center;
+	border-top: 3px solid #ff6f22;
+}
+
+.login_form {
+	padding:30px 60px;
+}
+
+.login_form h2 {
+	display:block;
+	padding-bottom:20px;
+	text-align:center;
+	font-size:20px;
+	text-transform:uppercase;
+}
+
+
+/* input 영역 */
+.item {
+	position:relative;
+	padding-bottom:7px;
+}
+.i_text {
+	width:316px;
+	margin:0 0 5px 0;
+	padding:8px 0 6px 10px;
+}
+
+.item label {
+	top:0;
+	left:0;
+	color:#909aa2;
+	font-size:0;
+	text-align:-999999em;
+}
+
+.item input {
+	padding-left:60px;
+	height:51px;
+	line-height:51px;
+	background-color:#f2f2f2;
+	border:0;
+	font-size:14px;
+    cursor: pointer;
+}
+
+.item input.uid {
+	background-position:0 0;
+}
+
+.item input.upw {
+	background-position:0 -51px;
+}
+
+.ico_uid,
+.ico_upw {
+	position:absolute;
+	top:0;
+	left:0;
+	width:51px;
+	height:51px;
+	display:block;
+}
+.ico_uid {
+	background: #f2f2f2 url(../../img/admin/login/ico_login_input.gif) no-repeat 0 0;
+}
+.ico_upw {
+	background: #f2f2f2 url(../../img/admin/login/ico_login_input.gif) no-repeat 0 -51px;
+}
+
+
+/* btn login */
+.btn_login {
+	display:block;
+	margin:10px 0 8px;
+	width:100%;
+	height:50px;
+	line-height:50px;
+	font-size:16px;
+	font-weight:600;
+	color:#fff;
+	border:0;
+	background-color:#ff6f22;
+	cursor:pointer;
+}
+
+/* 설명글 */
+.txt_info {
+	font-size:13px;
+	color:#986d62;
+}
+.login_info {
+	font-size:13px;
+	color:red;
+}
+
+/* copyrigt */
+address {
+	position:absolute;
+	right:0;
+	bottom:0;
+	left:588px;
+	padding:25px 20px;
+	text-align:center;
+	font-style:normal;
+	font-size:11px;
+	color:#8f8f8f;
+	font-family:Arial, Dotum, sans-serif;
+	letter-spacing:0;
+	background-color:#f0f2f3;
+}
+input:-webkit-autofill {
+   -webkit-box-shadow: 0 0 0 1000px #f2f2f2 inset;
+}
+
+

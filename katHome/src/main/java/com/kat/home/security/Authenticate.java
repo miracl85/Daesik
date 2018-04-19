@@ -1,0 +1,91 @@
+package com.kat.home.security;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.authentication.dao.SaltSource;
+import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
+import com.kat.home.dto.UserDTO;
+
+public class Authenticate implements AuthenticationProvider{
+
+	private final Logger logger = LoggerFactory.getLogger(Authenticate.class);
+	
+	private String inputUserId;
+	private String inputUserPw;
+	private String authority;
+	private SaltSource salt;
+	SecurityDao securityDao;
+	private ShaPasswordEncoder passwordEncoder;
+	
+	public void setInputUserId(String inputUserId) {
+		this.inputUserId = inputUserId;
+	}
+
+	public void setInputUserPw(String inputUserPw) {
+		this.inputUserPw = inputUserPw;
+	}
+
+	public void setAuthority(String authority) {
+		this.authority = authority;
+	}
+
+	public void setSecurityDao(SecurityDao securityDao) {
+		this.securityDao = securityDao;
+	}
+
+	public void setSalt(SaltSource salt) {
+		this.salt = salt;
+	}
+
+	public void setPasswordEncoder(ShaPasswordEncoder passwordEncoder) {
+		this.passwordEncoder = passwordEncoder;
+	}
+
+	@SuppressWarnings("unused")
+	@Override
+	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+		UserDTO userDto = new UserDTO();
+		UserDTO insertUserDto = new UserDTO();
+		
+		inputUserId = (String) authentication.getPrincipal();
+		inputUserId = inputUserId.trim(); 
+		inputUserPw = passwordEncoder.encodePassword((String)authentication.getCredentials(), salt);
+		
+		insertUserDto.setUserId(inputUserId);
+		insertUserDto.setUserPw(inputUserPw);
+		
+		//DB 연결
+		userDto = securityDao.getUserInfo(insertUserDto);
+		
+		if(userDto != null) {
+			authority = userDto.getAuthority();
+			
+			List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
+			roles.add(new SimpleGrantedAuthority(authority));
+			
+			UsernamePasswordAuthenticationToken result = new UsernamePasswordAuthenticationToken(userDto.getUserId(), userDto.getUserPw(), roles);
+			
+			result.setDetails(userDto);
+			
+			return result;
+		} else {
+			logger.info("LOGIN Fail");
+			return null;
+		}
+	}
+	
+	@Override
+	public boolean supports(Class<?> authentication) {
+		return authentication.equals(UsernamePasswordAuthenticationToken.class);
+	}
+}

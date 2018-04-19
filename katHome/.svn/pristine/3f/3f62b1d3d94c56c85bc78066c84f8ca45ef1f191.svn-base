@@ -1,0 +1,75 @@
+@charset "utf-8";
+@font-face{
+	font-family:"NanumGothic";
+	src:url('NanumGothic.eot');
+	src:url('fonts/NanumGothic.eot?#iefix') format('embedded-opentype'),
+	url('fonts/NanumGothic.woff') format('woff'),
+	url('fonts/NanumGothic.ttf') format('truetype');
+	src:local(※), url('fonts/NanumGothic.woff') format('woff');
+}
+
+
+/* base */
+body, html {height:100%;}
+* {-webkit-text-size-adjust:none;}
+body {font-size:13px; font-family:'NanumGothic', '나눔고딕','NanumGothicWeb', '맑은 고딕', 'Malgun Gothic', Dotum, sans-serif; color:#2d2d2d; line-height:20px; letter-spacing:-0.5px;}
+body, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, p, form, fieldset, legend, input, table, tr, th, td {margin:0; padding:0; letter-spacing:-0.5px;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal; letter-spacing:-0.5px;}
+ul, ol, li {list-style:none;}
+fieldset, img {border:none;}
+hr, button img {display:none;}
+table {border-collapse:collapse; border-spacing:0; width:100%; empty-cells:show;}
+caption, hr {position:absolute; top:0; left:0; visibility:hidden; overflow:hidden; font-size:0; line-height:0;}
+legend {position:absolute; top:0; left:0; width:0; height:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;}
+
+
+/* cross */
+* html input {margin:-1px 0; font-family:'NanumGothic', '나눔고딕','NanumGothicWeb', '맑은 고딕', 'Malgun Gothic', Dotum, sans-serif;} 
+*:first-child+html input {margin:-1px 0}
+input, textarea {} 
+input.checkbox {width:13px; height:13px; vertical-align:top;}
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="tel"]{
+	padding:0 5px; 
+	height:26px; 
+	line-height:26px;
+	width:100%;
+	border:1px solid #cecece;
+	font-size:1em;
+	font-family:'NanumGothic', '나눔고딕','NanumGothicWeb', '맑은 고딕', 'Malgun Gothic', Dotum, sans-serif;
+	box-sizing:border-box;
+	outline-style:none; 
+	-webkit-appearance:none;
+}
+input[type="button"],
+input[type="radio"]{
+	outline-style:none; 
+	-webkit-appearance:none;
+}
+input[type="file"] {
+	width:100%;
+	height:25px;
+}
+select {height:24px; line-height:24px;}
+
+/* a-style */
+a {color:#2d2d2d; text-decoration:none; letter-spacing:-0.5px;}
+a:hover, a:active {text-decoration:none;}
+
+/* html5 */
+address, article, aside, figure, footer, header, hgroup, menu, nav, section {display:block;}
+textarea{
+	font-size:13px; 
+	border:1px solid #dde2e4; 
+	padding:0 5px;
+	font-family:'NanumGothic', '나눔고딕','NanumGothicWeb', '맑은 고딕', 'Malgun Gothic', Dotum, sans-serif;
+	line-height:20px;
+	resize:none;
+	overflow:auto;
+}
+h2 {
+    -webkit-margin-before: 0;
+	   -webkit-margin-after: 0;
+}
